@@ -1,0 +1,40 @@
+/*
+BRAND COLOURS
+
+Primary: #9E5A63
+Light Accent: #C96567
+Light Shades: #F4F3EA
+Dark Accent: #B5C1CB
+Dark Shades: #314455
+*/
+
+// COLORS
+
+$colors: (
+    primary: (
+        100: hsl(352, 27%, 70%),
+        200: hsl(352, 27%, 60%),
+        300: hsl(352, 27%, 49%),
+        400: hsl(352, 27%, 40%),
+        500: hsl(352, 27%, 30%)
+    )
+);
+
+
+$color-light-shades: #F4F3EA;
+$color-light-accent: #C96567;
+$color-primary: #9e5a63;
+$color-dark-accent: #B5C1CB;
+$color-dark-shades: #314455;
+
+$color-grey-light: #f7f7f7;
+$color-grey-light-1: #eee;
+$color-grey-light-2: #bbb;
+
+$color-grey-dark: #333;
+$color-grey-dark-1: #464e5b;
+$color-grey-dark-2: #777;
+$color-grey-dark-3: #999;
+
+$color-white: #fff;
+$color-black: #000;

@@ -1,0 +1,36 @@
+@use '../abstracts' as *;
+
+.modal {
+    display: none;
+    margin: 0 auto;
+    position: absolute;
+    max-width: 60rem;
+    z-index: 10;
+
+    @media only screen and (max-width: 48em) {
+        max-width: 90vw;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        background-color: $color-grey-light;
+        padding: 2rem 4rem;
+        border-radius: 5px;
+    }
+
+    &__title {
+        color: $color-primary;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        text-align: center;
+        padding-bottom: .5rem;
+    }
+
+    &__content {
+        font-size: 1.4rem;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="shortcut icon"
+			href="../src/assets/favicon.ico"
+			type="image/x-icon"
+		/>
+		<module href="src/partials/_gtag.html"></module>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="scss/style.scss" />
+
+		<!-- Cookie Consent by https://www.FreePrivacyPolicy.com -->
+		<script
+			type="text/javascript"
+			src="//www.freeprivacypolicy.com/public/cookie-consent/3.1.0/cookie-consent.js"
+		></script>
+		<script type="text/javascript">
+			document.addEventListener('DOMContentLoaded', function () {
+				cookieconsent.run({
+					notice_banner_type: 'headline',
+					consent_type: 'express',
+					palette: 'light',
+					language: 'en',
+					website_name: 'WEC Global',
+					cookies_policy_url:
+						'https://wec-global.org/assets/docs/Cookies%20Policy.pdf',
+				});
+			});
+		</script>
+
+		<noscript
+			>Cookie Consent by
+			<a
+				href="https://www.FreePrivacyPolicy.com/free-cookie-consent/"
+				rel="nofollow noopener"
+				>FreePrivacyPolicy.com</a
+			></noscript
+		>
+		<!-- End Cookie Consent -->
+
+		<title>WEC Global | Initiatives</title>
+	</head>
+	<body>
+		<div class="container">
+			<!-- Header navigation module -->
+			<module
+				href="src/partials/_nav.html"
+				locals='{"about": "",
+                "join": "",
+                "membership": "",
+                "friend": "",
+                "initiatives": "header__link--active",
+                "team": "",
+                "blogs": "",
+                "contact": ""}'
+			></module>
+
+			<section class="hero">
+				<div class="hero__title">
+					<h1 class="hero__title-h1">See our initiatives</h1>
+					<h3 class="hero__title-h3">
+						Find the next event you’ll want to attend
+					</h3>
+					<button class="btn btn-primary btn-center">
+						<a href="../src/membership.html" class="btn__link">Join us now</a>
+					</button>
+				</div>
+				<div class="hero__image">
+					<img
+						class="hero__image__main"
+						src="../src/assets/img/headers/initiatives.svg"
+						alt="Women in Ethics & Compliance Global"
+					/>
+				</div>
+			</section>
+
+			<main class="main pb-8">
+				<!-- Eventbrite Section -->
+				<!-- <section class="content-section">
+					<div class="content-section__center">
+						<h2 class="heading-2">Events</h2>
+
+						<div class="content-section__copy">
+							<div id="eventbrite-widget-container-153701323797"></div>
+							<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+							<script type="text/javascript">
+								var exampleCallback = function () {
+									console.log('Order complete!');
+								};
+
+								window.EBWidgets.createWidget({
+									// Required
+									widgetType: 'checkout',
+									eventId: '153701323797',
+									iframeContainerId: 'eventbrite-widget-container-153701323797',
+
+									// Optional
+									iframeContainerHeight: 425, // Widget height in pixels. Defaults to a minimum of 425px if not provided
+									onOrderComplete: exampleCallback, // Method called when an order has successfully completed
+								});
+							</script>
+						</div>
+					</div>
+				</section> -->
+
+				<!-- Past Events Section -->
+				<section class="content-section">
+					<div class="content-section__center">
+						<h2 class="heading-2">Past Events</h2>
+					</div>
+				</section>
+
+				<section class="container-grid">
+					<div class="blogposts">
+						<!-- Event: Ethical Blindness -->
+						<!-- <div class="blogpost">
+							<img
+								src="assets/img/events/event-ethical-blindness.png"
+								alt="Ethical Blindness - Why good people do bad things with Dr. Bettina Palazzo"
+								class="blogpost__image"
+							/>
+							<div class="blogpost__container">
+								<div class="blogpost__info">
+									<div class="blogpost__date">June 29th, 2021</div>
+								</div>
+								<div class="blogpost__description">
+									<div class="blogpost__title">
+										<h2 class="heading-2">Ethical Blindness</h2>
+									</div>
+									<div class="blogpost__intro">
+										Why good people do bad things with Dr. Bettina Palazzo
+									</div>
+								</div>
+							</div>
+						</div> -->
+
+						<!-- Event: You Investing & ESG -->
+						<div class="blogpost">
+							<img
+								src="assets/img/events/event-you-investing-esg.png"
+								alt="You Investing & ESG - Aligning your pension with your values with Georgia Stewart"
+								class="blogpost__image"
+							/>
+							<div class="blogpost__container">
+								<div class="blogpost__info">
+									<div class="blogpost__date">May 20th, 2021</div>
+								</div>
+								<div class="blogpost__description">
+									<div class="blogpost__title">
+										<h2 class="heading-2">You Investing & ESG</h2>
+									</div>
+									<div class="blogpost__intro">
+										Aligning your pension with your values with Georgia Stewart
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="blogpost">
+							<img
+								src="assets/img/events/event-meet-the-women-behind-wec-global.png"
+								alt="Meet the Women Behind WEC Global"
+								class="blogpost__image"
+							/>
+							<div class="blogpost__container">
+								<div class="blogpost__info">
+									<div class="blogpost__date">April 29th, 2021</div>
+								</div>
+								<div class="blogpost__description">
+									<div class="blogpost__title">
+										<h2 class="heading-2">Meet the Women Behind WEC Global</h2>
+									</div>
+									<div class="blogpost__intro">
+										Discover what bind us together
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+
+			<!-- Footer module -->
+			<module href="src/partials/_footer.html"></module>
+		</div>
+	</body>
+</html>
