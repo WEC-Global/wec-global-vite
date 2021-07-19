@@ -1,68 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			rel="shortcut icon"
-			href="../src/assets/favicon.ico"
-			type="image/x-icon"
-		/>
-		<module href="src/partials/_gtag.html"></module>
-		<link rel="preconnect" href="https://fonts.gstatic.com" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="scss/style.scss" />
-
-		<!-- Cookie Consent by https://www.FreePrivacyPolicy.com -->
-		<script
-			type="text/javascript"
-			src="//www.freeprivacypolicy.com/public/cookie-consent/3.1.0/cookie-consent.js"
-		></script>
-		<script type="text/javascript">
-			document.addEventListener('DOMContentLoaded', function () {
-				cookieconsent.run({
-					notice_banner_type: 'headline',
-					consent_type: 'express',
-					palette: 'light',
-					language: 'en',
-					website_name: 'WEC Global',
-					cookies_policy_url:
-						'https://wec-global.org/assets/docs/Cookies%20Policy.pdf',
-				});
-			});
-		</script>
-
-		<noscript
-			>Cookie Consent by
-			<a
-				href="https://www.FreePrivacyPolicy.com/free-cookie-consent/"
-				rel="nofollow noopener"
-				>FreePrivacyPolicy.com</a
-			></noscript
-		>
-		<!-- End Cookie Consent -->
-
-		<title>WEC Global | Blogs</title>
-	</head>
+	{{> _head title='Blogs' }}
 
 	<body>
 		<div class="container">
-			<!-- Header navigation module -->
-			<module
-				href="src/partials/_nav.html"
-				locals='{"about": "",
-                "join": "",
-                "membership": "",
-                "friend": "",
-                "initiatives": "",
-                "team": "",
-                "blogs": "header__link--active",
-                "contact": ""}'
-			></module>
+			<!-- Header -->
+			{{> _header blogs='header__link--active' }}
+			<!-- End of Header -->
 
 			<section class="hero">
 				<div class="hero__title">
@@ -71,13 +15,13 @@
 						A journal on ethics, compliance, life, and more
 					</h3>
 					<button class="btn btn-primary btn-center">
-						<a href="../src/membership.html" class="btn__link">Join us now</a>
+						<a href="./membership.html" class="btn__link">Join us now</a>
 					</button>
 				</div>
 				<div class="hero__image">
 					<img
 						class="hero__image__main"
-						src="../src/assets/img/headers/blog.svg"
+						src="./assets/img/headers/blog.svg"
 						alt="Women in Ethics & Compliance Global"
 					/>
 				</div>
@@ -87,9 +31,9 @@
 				<section class="container-grid">
 					<div class="blogposts">
 						<div class="blogpost">
-							<a href="the-evolution-of-the-compliance-profession.html">
+							<a href="./blogs/the-evolution-of-the-compliance-profession.html">
 								<img
-									src="assets/img/blogs/the-evolution-of-the-compliance-profession.png"
+									src="./assets/img/blogs/the-evolution-of-the-compliance-profession.png"
 									alt="The Evolution of the Compliance Profession"
 									class="blogpost__image"
 								/>
@@ -115,9 +59,9 @@
 							</a>
 						</div>
 						<div class="blogpost">
-							<a href="changing-the-workplace-environment.html">
+							<a href="./blogs/changing-the-workplace-environment.html">
 								<img
-									src="assets/img/blogs/changing-the-workplace-environment.png"
+									src="./assets/img/blogs/changing-the-workplace-environment.png"
 									alt="Changing The Workplace Environment And Becoming An Ally"
 									class="blogpost__image"
 								/>
@@ -143,9 +87,11 @@
 						</div>
 
 						<div class="blogpost">
-							<a href="on-a-mission-to-eradicate-sexual-harassment.html">
+							<a
+								href="./blogs/on-a-mission-to-eradicate-sexual-harassment.html"
+							>
 								<img
-									src="assets/img/blogs/on-a-mission-to-eradicate-sexual-harassment.png"
+									src="./assets/img/blogs/on-a-mission-to-eradicate-sexual-harassment.png"
 									alt="On A Mission To Eradicate Sexual Harassment"
 									class="blogpost__image"
 								/>
@@ -173,9 +119,11 @@
 						</div>
 
 						<div class="blogpost">
-							<a href="the-female-empowerment-of-career-development.html">
+							<a
+								href="./blogs/the-female-empowerment-of-career-development.html"
+							>
 								<img
-									src="assets/img/blogs/the-female-empowerment-of-career-development.png"
+									src="./assets/img/blogs/the-female-empowerment-of-career-development.png"
 									alt="The Female Empowerment of Career Development"
 									class="blogpost__image"
 								/>
@@ -201,9 +149,9 @@
 						</div>
 
 						<div class="blogpost">
-							<a href="connections.html">
+							<a href="./blogs/connections.html">
 								<img
-									src="assets/img/blogs/connections.png"
+									src="./assets/img/blogs/connections.png"
 									alt="Connections"
 									class="blogpost__image"
 								/>
@@ -227,9 +175,9 @@
 						</div>
 
 						<div class="blogpost">
-							<a href="trust-facts-fake-news.html">
+							<a href="./blogs/trust-facts-fake-news.html">
 								<img
-									src="assets/img/blogs/trust-facts-fake-news.png"
+									src="./assets/img/blogs/trust-facts-fake-news.png"
 									alt="Trust Facts & Fake News"
 									class="blogpost__image"
 								/>
@@ -253,9 +201,9 @@
 						</div>
 
 						<div class="blogpost">
-							<a href="world-intellectual-property-day-2021.html">
+							<a href="./blogs/world-intellectual-property-day-2021.html">
 								<img
-									src="assets/img/blogs/world-intellectual-propert-day.png"
+									src="./assets/img/blogs/world-intellectual-propert-day.png"
 									alt="World Intellectual Property Day"
 									class="blogpost__image"
 								/>
@@ -279,9 +227,9 @@
 						</div>
 
 						<div class="blogpost">
-							<a href="your-guide-to-wec-global.html">
+							<a href="./blogs/your-guide-to-wec-global.html">
 								<img
-									src="assets/img/blogs/your-guide-to-wec.png"
+									src="./assets/img/blogs/your-guide-to-wec.png"
 									alt="WEC Membership"
 									class="blogpost__image"
 								/>
@@ -307,8 +255,9 @@
 				</section>
 			</main>
 
-			<!-- Footer module -->
-			<module href="src/partials/_footer.html"></module>
+			<!-- Footer Partial -->
+			{{> _footer }}
+			<!-- End of Footer -->
 		</div>
 	</body>
 </html>
