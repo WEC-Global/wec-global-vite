@@ -1,67 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			rel="shortcut icon"
-			href="../src/assets/favicon.ico"
-			type="image/x-icon"
-		/>
-		<module href="src/partials/_gtag.html"></module>
-		<link rel="preconnect" href="https://fonts.gstatic.com" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="scss/style.scss" />
-
-		<!-- Cookie Consent by https://www.FreePrivacyPolicy.com -->
-		<script
-			type="text/javascript"
-			src="//www.freeprivacypolicy.com/public/cookie-consent/3.1.0/cookie-consent.js"
-		></script>
-		<script type="text/javascript">
-			document.addEventListener('DOMContentLoaded', function () {
-				cookieconsent.run({
-					notice_banner_type: 'headline',
-					consent_type: 'express',
-					palette: 'light',
-					language: 'en',
-					website_name: 'WEC Global',
-					cookies_policy_url:
-						'https://wec-global.org/assets/docs/Cookies%20Policy.pdf',
-				});
-			});
-		</script>
-
-		<noscript
-			>Cookie Consent by
-			<a
-				href="https://www.FreePrivacyPolicy.com/free-cookie-consent/"
-				rel="nofollow noopener"
-				>FreePrivacyPolicy.com</a
-			></noscript
-		>
-		<!-- End Cookie Consent -->
-
-		<title>WEC Global | Become a Friend</title>
-	</head>
+	{{> _head title='Become a Friend' }}
 	<body>
 		<div class="container">
-			<!-- Header navigation module -->
-			<module
-				href="src/partials/_nav.html"
-				locals='{"about": "",
-                "join": "header__link--active",
-                "membership": "",
-                "friend": "header__link--active",
-                "initiatives": "",
-                "team": "",
-                "blogs": "",
-                "contact": ""}'
-			></module>
+			<!-- Header -->
+			{{> _header friend='header__link--active' join='header__link--active'}}
+			<!-- End of Header -->
 
 			<section class="hero">
 				<div class="hero__title">
@@ -78,7 +22,7 @@
 				<div class="hero__image">
 					<img
 						class="hero__image__main"
-						src="../src/assets/img/headers/friends.svg"
+						src="../assets/img/headers/friends.svg"
 						alt="Women in Ethics & Compliance Global"
 					/>
 				</div>
@@ -105,7 +49,7 @@
 					<div class="membership-reasons">
 						<div class="membership-reason">
 							<img
-								src="assets/img/friend/7.svg"
+								src="./assets/img/friend/7.svg"
 								alt="WEC Membership"
 								class="membership-reason__image"
 							/>
@@ -116,7 +60,7 @@
 						</div>
 						<div class="membership-reason">
 							<img
-								src="assets/img/friend/8.svg"
+								src="./assets/img/friend/8.svg"
 								alt="WEC Membership"
 								class="membership-reason__image"
 							/>
@@ -126,7 +70,7 @@
 						</div>
 						<div class="membership-reason">
 							<img
-								src="assets/img/friend/9.svg"
+								src="./assets/img/friend/9.svg"
 								alt="WEC Membership"
 								class="membership-reason__image"
 							/>
@@ -156,7 +100,7 @@
 				<section class="feature">
 					<div class="feature__right">
 						<img
-							src="assets/img/sections/register-friend.svg"
+							src="./assets/img/sections/register-friend.svg"
 							alt="Friend registration"
 							class="feature__image"
 						/>
@@ -183,8 +127,9 @@
 				</section>
 			</main>
 
-			<!-- Footer module -->
-			<module href="src/partials/_footer.html"></module>
+			<!-- Footer Partial -->
+			{{> _footer }}
+			<!-- End of Footer -->
 		</div>
 	</body>
 </html>
