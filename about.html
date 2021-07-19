@@ -1,73 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			rel="shortcut icon"
-			href="../src/assets/favicon.ico"
-			type="image/x-icon"
-		/>
-		<module href="src/partials/_gtag.html"></module>
-		<link rel="preconnect" href="https://fonts.gstatic.com" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="scss/style.scss" />
-		<script
-			type="text/plain"
-			cookie-consent="strictly-necessary"
-			src="js/script.js"
-			defer
-		></script>
-
-		<!-- Cookie Consent by https://www.FreePrivacyPolicy.com -->
-		<script
-			type="text/javascript"
-			src="//www.freeprivacypolicy.com/public/cookie-consent/3.1.0/cookie-consent.js"
-		></script>
-		<script type="text/javascript">
-			document.addEventListener('DOMContentLoaded', function () {
-				cookieconsent.run({
-					notice_banner_type: 'headline',
-					consent_type: 'express',
-					palette: 'light',
-					language: 'en',
-					website_name: 'WEC Global',
-					cookies_policy_url:
-						'https://wec-global.org/assets/docs/Cookies%20Policy.pdf',
-				});
-			});
-		</script>
-
-		<noscript
-			>Cookie Consent by
-			<a
-				href="https://www.FreePrivacyPolicy.com/free-cookie-consent/"
-				rel="nofollow noopener"
-				>FreePrivacyPolicy.com</a
-			></noscript
-		>
-		<!-- End Cookie Consent -->
-
-		<title>WEC Global | About</title>
-	</head>
+	{{> _head title='About' }}
 	<body>
 		<div class="container">
-			<!-- Header navigation module -->
-			<module
-				href="src/partials/_nav.html"
-				locals='{"about": "header__link--active",
-                "join": "",
-                "membership": "",
-                "friend": "",
-                "initiatives": "",
-                "team": "",
-                "blogs": "",
-                "contact": ""}'
-			></module>
+			<!-- Header -->
+			{{> _header about='header__link--active'}}
+			<!-- End of Header -->
 
 			<section class="hero">
 				<div class="hero__title">
@@ -80,7 +18,7 @@
 				<div class="hero__image">
 					<img
 						class="hero__image__main"
-						src="../src/assets/img/headers/about.svg"
+						src="./assets/img/headers/about.svg"
 						alt="Women in Ethics & Compliance Global"
 					/>
 				</div>
@@ -162,7 +100,7 @@
 							data-content="We focus on the greater good for our members and conduct ourselves ethically and honestly at all times.  This is the driving force in building this network of professionals and, as we face challenges, we do so with respect and truthfulness."
 						>
 							<img
-								src="../src/assets/img/values/integrity.svg"
+								src="./assets/img/values/integrity.svg"
 								alt="Integrity"
 								class="values__icon"
 							/>
@@ -177,7 +115,7 @@
 							data-content="We support diversity and inclusion for all.  In this organization, you are welcomed to bring your whole self so your voice can be heard. We believe in sharing our individual views and opinions with an open mind."
 						>
 							<img
-								src="../src/assets/img/values/diversity.svg"
+								src="./assets/img/values/diversity.svg"
 								alt="Diversity"
 								class="values__icon"
 							/>
@@ -192,7 +130,7 @@
 							data-content="We act with a united focus in our mission and our course of action, by demonstrating passion and commitment for the betterment of WEC Global and its members."
 						>
 							<img
-								src="../src/assets/img/values/purpose.svg"
+								src="./assets/img/values/purpose.svg"
 								alt="Purpose"
 								class="values__icon"
 							/>
@@ -207,7 +145,7 @@
 							data-content="We undertake a sense of service and responsibility in assisting all members and supporting others around us. We aim to work together towards our common goals and give support to one another along the way."
 						>
 							<img
-								src="../src/assets/img/values/contribution.svg"
+								src="./assets/img/values/contribution.svg"
 								alt="Contribution"
 								class="values__icon"
 							/>
@@ -222,7 +160,7 @@
 							data-content="We answer the needs of our members by adapting to the rising and changing demands of current issues. As we provide education in the compliance and ethics community, rising cultural demands and issues can be sensitive matters. However, we adapt to the needs of our members and encourage entertainment and merriment where appropriate."
 						>
 							<img
-								src="../src/assets/img/values/adaptability.svg"
+								src="./assets/img/values/adaptability.svg"
 								alt="Adaptability"
 								class="values__icon"
 							/>
@@ -259,8 +197,9 @@
 				</div>
 			</div>
 
-			<!-- Footer module -->
-			<module href="src/partials/_footer.html"></module>
+			<!-- Footer Partial -->
+			{{> _footer }}
+			<!-- End of Footer -->
 		</div>
 	</body>
 </html>
