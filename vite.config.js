@@ -1,33 +1,33 @@
-import path from 'path';
-// import glob from 'glob';
+import { resolve } from 'path';
 import handlebars from 'vite-plugin-handlebars';
+import mpa from 'vite-plugin-mpa';
 
-export default {
-	root: path.resolve(__dirname, 'src'),
+module.exports = {
 	build: {
-		outDir: path.join(__dirname, 'dist'),
-		emptyOutDir: true,
 		rollupOptions: {
 			input: {
-				main: path.resolve(__dirname, '/index.html'),
-				about: path.resolve(__dirname, '/about.html'),
-				contact: path.resolve(__dirname, '/contact.html'),
-				friend: path.resolve(__dirname, '/friend.html'),
-				initiatives: path.resolve(__dirname, '/initiatives.html'),
-				media: path.resolve(__dirname, '/media.html'),
-				membership: path.resolve(__dirname, '/membership.html'),
-				team: path.resolve(__dirname, '/team.html'),
-				connections: path.resolve(__dirname, '/blogs/connections.html'),
-				'changing-the-workplace-environment': path.resolve(
-					__dirname,
-					'/blogs/changing-the-workplace-environment.html'
-				),
+				main: resolve(__dirname, './src/index.html'),
+				// about: resolve(__dirname, './src/about.html'),
+				// contact: resolve(__dirname, './src/contact.html'),
+				// friend: resolve(__dirname, './src/friend.html'),
+				// initiatives: resolve(__dirname, './src/initiatives.html'),
+				// media: resolve(__dirname, './src/media.html'),
+				// membership: resolve(__dirname, './src/membership.html'),
+				// team: resolve(__dirname, './src/team.html'),
+				// nested: resolve(__dirname, '.src/blogs'),
 			},
 		},
 	},
+};
+
+export default {
 	plugins: [
 		handlebars({
-			partialDirectory: path.resolve(__dirname, 'src', 'partials'),
+			partialDirectory: resolve(__dirname, 'partials'),
+		}),
+		mpa({
+			open: 'src/*.html',
+			scanDir: 'src/blogs/*.html',
 		}),
 	],
 };
