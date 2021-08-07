@@ -1,33 +1,50 @@
-import { resolve } from 'path';
+import path from 'path';
+import glob from 'glob';
 import handlebars from 'vite-plugin-handlebars';
-import mpa from 'vite-plugin-mpa';
+import copy from 'rollup-plugin-copy';
 
-module.exports = {
-	build: {
-		rollupOptions: {
-			input: {
-				main: resolve(__dirname, './src/index.html'),
-				// about: resolve(__dirname, './src/about.html'),
-				// contact: resolve(__dirname, './src/contact.html'),
-				// friend: resolve(__dirname, './src/friend.html'),
-				// initiatives: resolve(__dirname, './src/initiatives.html'),
-				// media: resolve(__dirname, './src/media.html'),
-				// membership: resolve(__dirname, './src/membership.html'),
-				// team: resolve(__dirname, './src/team.html'),
-				// nested: resolve(__dirname, '.src/blogs'),
-			},
-		},
-	},
-};
+// Add the root folder and the blogs folder to rollupOptions.input
+rootFolders = glob.sync(path.resolve(__dirname, 'src', '*.html'));
+inputFolders = rootFolders.concat(
+	glob.sync(path.resolve(__dirname, 'src/blogs', '*.html'))
+);
 
 export default {
+	root: path.resolve(__dirname, 'src'),
+	// assetsInclude: 'pdf',
+	build: {
+		outDir: path.join(__dirname, 'dist'),
+		emptyOutDir: true,
+		rollupOptions: {
+			input: inputFolders,
+			// input: {
+			// 	main: path.resolve(__dirname, '/index.html'),
+			// 	about: path.resolve(__dirname, '/about.html'),
+			// 	contact: path.resolve(__dirname, '/contact.html'),
+			// 	friend: path.resolve(__dirname, '/friend.html'),
+			// 	initiatives: path.resolve(__dirname, '/initiatives.html'),
+			// 	media: path.resolve(__dirname, '/media.html'),
+			// 	membership: path.resolve(__dirname, '/membership.html'),
+			// 	team: path.resolve(__dirname, '/team.html'),
+			// 	connections: path.resolve(__dirname, '/blogs/connections.html'),
+			// 	'changing-the-workplace-environment': path.resolve(
+			// 		__dirname,
+			// 		'/blogs/changing-the-workplace-environment.html'
+			// 	),
+			// },
+		},
+	},
 	plugins: [
 		handlebars({
-			partialDirectory: resolve(__dirname, 'partials'),
+			partialDirectory: path.resolve(__dirname, 'src', 'partials'),
 		}),
-		mpa({
-			open: 'src/*.html',
-			scanDir: 'src/blogs/*.html',
+		copy({
+			targets: [
+				{ src: './src/assets/docs', dest: './dist/assets/docs' },
+				{ src: './src/assets/img/*', dest: './dist/assets/img' },
+			],
+			flatten: false,
+			hook: 'writeBundle',
 		}),
 	],
 };
