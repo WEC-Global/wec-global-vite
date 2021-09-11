@@ -8,24 +8,12 @@
 			{{> _header blogs='header__link--active' }}
 			<!-- End of Header -->
 
-			<section class="hero">
-				<div class="hero__title">
-					<h1 class="hero__title-h1">Read our Latest Blogs</h1>
-					<h3 class="hero__title-h3">
-						A journal on ethics, compliance, life, and more
-					</h3>
-					<button class="btn btn-primary btn-center">
-						<a href="../membership.html" class="btn__link">Join us now</a>
-					</button>
-				</div>
-				<div class="hero__image">
-					<img
-						class="hero__image__main"
-						src="../assets/img/headers/blog.svg"
-						alt="Women in Ethics & Compliance Global"
-					/>
-				</div>
-			</section>
+			<!-- Hero Banner -->
+			{{> _hero-banner hero_title='Read our Latest Blogs' hero_subtitle='A
+			journal on ethics, compliance, life, and more'
+			hero_image='/assets/img/headers/blog.svg' hero_image_alt='Women in Ethics
+			& Compliance Global' hero__blog='hero__blog'}}
+			<!-- End of Hero Banner -->
 
 			<main class="main pb-8 pt-4">
 				<div class="content-section__center">
@@ -53,7 +41,7 @@
 							href="https://www.linkedin.com/in/fernandagarciaonions/"
 						>
 							<img
-								src="../assets/img/members/fernanda_onions.jpg"
+								src="/assets/img/members/Fernanda Onions.jpg"
 								alt="Fernanda Onions"
 								class="blog-section__author__photo"
 							/>
