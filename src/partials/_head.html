@@ -7,7 +7,29 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 	<link rel="manifest" href="/site.webmanifest" />
 
+	<!--  Essential META Tags -->
+	<meta property="title" content="{{ title }}" />
+	<meta
+		property="og:description"
+		content="A unique and exciting space for brilliant and smart-minded women in ethics and compliance to connect, learn and collaborate"
+	/>
+	<!-- Meta Image -->
+	{{#if og_image}}
+	<meta property="og:image" content="https://wec-global.org{{og_image}}" />
+	{{else}}
+	<meta property="og:image" content="https://wec-global.org/wec-global.png" />
+	{{/if}}
+	<!-- Meta URL -->
+	{{#if og_url}}
+	<meta property="og:url" content="https://wec-global.org{{og_url}}" />
+	{{else}}
+	<meta property="og:url" content="https://wec-global.org" />
+	{{/if}}
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
 	{{> _gtag }}
+	<!-- /Global site tag (gtag.js) - Google Analytics -->
+
 	<!-- Font -->
 	<link rel="preconnect" href="https://fonts.gstatic.com" />
 	<link
@@ -18,7 +40,9 @@
 	<link rel="stylesheet" href="{{resolve-from-root '/scss/style.scss'}}" />
 	<!-- <link rel="stylesheet" href="{{resolve-from-root '/scss/style.scss'}}" /> -->
 
+	<!-- Cookie Consent by https://www.FreePrivacyPolicy.com -->
 	{{> _cookie-policy }}
+	<!-- End Cookie Consent -->
 
 	<title>WEC Global | {{ title }}</title>
 </head>
