@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.ba1111b2.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAABNZJREFUWEedV21sU1UYfk5vt3Z07gu2bNmgSUemwyErCHHCJoN1cwkMgquiCy7RH2pEY2KMARP/+tOEXxoTmEoUw4SBgYW5ZYhDfgzxM47APiLYhVmyrtvardDbY+69537f23aeP+09977P+77P+3UO8e96zks50kOAHQBxUgoQABTQ/BEeAEKEXcJemt+zt9LH4tLsCLJUQBbleFCMIMV3E//u4A8gaFK1auTZ9wqOgCHKM2DBFmawRkpnuGKC4pXWPHqZ+FuCSYByktRKltlfk+d2BjJ2KUWS1LcEZWJ0pGnh06myZM46CMagSNHwtwRpehAxG1jA7RlycAQVpWsQuhdOQ6PZFcmAFS0zSFVFKY68fQgbfOvwxgcf4+b43xkRZRQ1BBZJos1lmQOtekII9rc14pXOVoydvYTQL3+iN7qEUGxZTHixaLRLp0NCEhlQQdNGWxfZstUleP9wF9ZyBNe/PIul6DzCSR59c3Esp7InlfgDnVSpT23d6v4LuuUGQdC2cxve7OrARP8wJkdGIei7Hk9gNJ4Q/69kEX8gSKWuk3kVF+bj3ddfRG1JIUY/P43Y/QhmkzwG55cxk+QzA5icEqug06qVqInPjGvYUof3XnsBocvXcHvoKlKU4rd4AtdiCSR1DghwrFtqYi4HV/0Vio/lgJps0qY5cSjqytego6wIC/fCcBcVoOiZBhzrG8JMeDYLz7XprPRRqbiNjcgOrczJoekRNypyODg4DuubG1AdaETvwI/46swglhMP9G2aARk9N+JbhsCy9TBiHnXlYLvHBQ/ngLsgH3X7AvDUVOOTk+cwNHIDckJRVltCNEw5puzRDDlgQ0cOAZ5c5UL9qlw4CUGxtxL+5/di+mESRz/6FNGFWNZh+R+dUMUu5BzYWeTBOk7oOgTerZtwfGwKf03czdIAgQGlDAXyiJjApnZgA7ex1ocjhw/h/ngIUxcHkYzM4tvoEqYfPBQlxPhnKPE0DNh3xdwcJ149uAcdzzbh9t0I5mMJxBbj6PvmNMamZ0wlbG0/c1gZRrazgH3IUGp8VTj61svI8xRgMhQBn6K4eWsc5y5cwsKiGvtsm7qZAdEQcx1wnANdB1rx0v5WTE5HMDufwHIigf6BYfz86+9mJ+0cMuxbhsBqku1peRrdB/dh4p8IknwK/4bD+OLUGczNRRnlmjOfbI5BmRUrmauAgWzbsgkd7a1itrtzOdRVl6F/+Ccc//oCFhbjGgYs1BjZ0DynN8AgWLPeh/bWZpSuLgHHcfCWFyDfTXDi1EWc//4qeD5lTkBNZzcfYHVlaJWrZm8ExU9t3Yzmpu1wu3KR53LCV1WMaCSCYyd6ceOPW0oZ6xVap2VWJyL9KJGe8j0eBJobsbl+I4STUUlBHnyVRXjnQ+FIdkfnjU61kuQSNZIBaY5jmU69VRXlaG/bDe/aStGQz3pOYupOSBGzPewzndkdSNjHdrUtKH7i8VpseKwG3/UPYDEm9AMr1RanYtM4NrHBhNjVSg9h7BfZth/5Wicnody4TcPaZpTKs57pX+mdSqtGvJpRQJhn6gDJNMvS5YwiKzOnApv5obx6OTUKiimqXj4zHt2zMcpQAaC4Qvy7Dnipw9FDQHYAcEqK9AMoUyWsgDu5UfGgdISmUt3/ARQi6vZ9CgNGAAAAAElFTkSuQmCC" />
+		<link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAgxJREFUOE9Vk0trFFEQhb+bcWQG0aAYI0ExCEEQQdsXhkjGcZxN0I1kFN2p2eYfCK5cuxZXghoUYhBkFmJEA4OIClmpEAImUdGNjwmJo6G75Na9t7vtTXfX41TVqVMmqo1OYMx5EIM+9iX+nfvyXnW5RxC5b6JTjcRFC2JcskmDXJbC5QE0wFi7WADR2uJN+u0TjVAqrqdxpsrD5gyrvzseTFO1rInqDcm15ezWD+wd6OfS8CE+P3/JrY9fWYmT3IC2okE7SK1+jHWFAhdPV9m39odXrbc8Xe7wK5ccmNK3AniLTiZwpT7Iti/f+LAW82hugSQ4NFJn15r6d8ADOLML6CsWqGwsc3AoYnFTN3cev+BHexkkTGscgHLgSVSDBjhnl+WgXGR4azcDJwa5NjVNe2XVbU87dT1kHIR9BWQMZ0cqVI8d4c1Uk3uz7/grnt0gA1vMbcFpwNgAY+jt2cL45XOUNmzmybMW0zMt4jhOFZQXWtqBz7VYjI9dYEffLhaX5rl5e5I4SVLi/PoRccOmW8imh3K5RK1ynMrQUYp0uDvZ5PXs+4x7FZvbxX9rzMo45/beHkbqNQ7v38PV6zf4/rOdnYoPzq0xaD4Q5aRq43b372Rh6RNxnF2SXo+lLD0mNQgmXI22GDTnpeOTgpzs2Zno5OgEXfac3UXqNsNxWbAgO99Y7ijFCA/+ATMh5e3TtvhRAAAAAElFTkSuQmCC" />
+		<link rel="manifest" href="data:application/manifest+json;base64,ewoJIm5hbWUiOiAiV29tZW4gaW4gRXRoaWNzICYgQ29tcGxpYW5jZSBHbG9iYWwiLAoJInNob3J0X25hbWUiOiAiV0VDLUdsb2JhbCIsCgkiaWNvbnMiOiBbCgkJewoJCQkic3JjIjogIi4vYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLAoJCQkic2l6ZXMiOiAiMTkyeDE5MiIsCgkJCSJ0eXBlIjogImltYWdlL3BuZyIKCQl9LAoJCXsKCQkJInNyYyI6ICIuL2FuZHJvaWQtY2hyb21lLTUxMng1MTIucG5nIiwKCQkJInNpemVzIjogIjUxMng1MTIiLAoJCQkidHlwZSI6ICJpbWFnZS9wbmciCgkJfQoJXSwKCSJ0aGVtZV9jb2xvciI6ICIjZmZmZmZmIiwKCSJiYWNrZ3JvdW5kX2NvbG9yIjogIiNmZmZmZmYiLAoJImRpc3BsYXkiOiAic3RhbmRhbG9uZSIKfQo=" />
+	
+		<!--  Essential META Tags -->
+		<meta property="title" content="Initiatives" />
+		<meta
+			property="og:description"
+			content="A unique and exciting space for brilliant and smart-minded women in ethics and compliance to connect, learn and collaborate"
+		/>
+		<!-- Meta Image -->
+		<meta property="og:image" content="https://wec-global.org/wec-global.png" />
+		<!-- Meta URL -->
+		<meta property="og:url" content="https://wec-global.org" />
+	
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=UA-201399005-1"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+		
+			gtag('config', 'UA-201399005-1');
+		</script>
+		<!-- /Global site tag (gtag.js) - Google Analytics -->
+	
+		<!-- Font -->
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- CSS -->
+		
+		<!-- <link rel="stylesheet" href="/scss/style.scss" /> -->
+	
+		<!-- Cookie Consent by https://www.FreePrivacyPolicy.com -->
+		<script
+			type="text/javascript"
+			src="//www.freeprivacypolicy.com/public/cookie-consent/3.1.0/cookie-consent.js"
+		></script>
+		<script type="text/javascript">
+			document.addEventListener('DOMContentLoaded', function () {
+				cookieconsent.run({
+					notice_banner_type: 'headline',
+					consent_type: 'express',
+					palette: 'light',
+					language: 'en',
+					website_name: 'WEC Global',
+					cookies_policy_url:
+						'https://wec-global.org/assets/docs/Cookies%20Policy.pdf',
+				});
+			});
+		</script>
+		
+		<noscript
+			>Cookie Consent by
+			<a
+				href="https://www.FreePrivacyPolicy.com/free-cookie-consent/"
+				rel="nofollow noopener"
+				>FreePrivacyPolicy.com</a
+			></noscript
+		>
+		<!-- End Cookie Consent -->
+	
+		<title>WEC Global | Initiatives</title>
+	  <script type="module" crossorigin src="/assets/initiatives.73a4fbe4.js"></script>
+    <link rel="modulepreload" href="/assets/style.f6cf4e0b.js">
+    <link rel="stylesheet" href="/assets/style.bb411332.css">
+  </head>
+	<body>
+		<div class="container">
+			<!-- Header -->
+			<header class="header">
+				<a href="/index.html" class="header__logo-link">
+					<img
+						class="header__logo"
+						src="/assets/logo_dark_horizontal.3da46b72.svg"
+						alt="WEC Global"
+					/>
+				</a>
+			
+				<input type="checkbox" id="hamburger-check" />
+				<div class="hamburger-btn">
+					<label for="hamburger-check">
+						<span></span>
+						<span></span>
+						<span></span>
+					</label>
+				</div>
+			
+				<nav class="header__nav">
+					<ul class="header__list">
+						<li class="header__item">
+							<a href="/about.html" class="header__link ">About</a>
+						</li>
+						<li class="header__item">
+							<a href="#" class="header__link ">Join</a>
+							<ul class="header__sublist">
+								<li class="header__item">
+									<a href="/membership.html" class="header__link "
+										>Membership</a
+									>
+								</li>
+								<li class="header__item">
+									<a href="/friend.html" class="header__link ">Friend</a>
+								</li>
+							</ul>
+						</li>
+						<li class="header__item">
+							<a href="/initiatives.html" class="header__link header__link--active"
+								>Initiatives</a
+							>
+						</li>
+						<li class="header__item">
+							<a href="/team.html" class="header__link ">Team</a>
+						</li>
+						<li class="header__item">
+							<a href="/media.html" class="header__link ">Media</a>
+						</li>
+						<li class="header__item">
+							<a href="/contact.html" class="header__link ">Contact</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<!-- End of Header -->
+
+			<section class="hero">
+				<div class="hero__title ">
+					<h1 class="hero__title-h1">See our initiatives</h1>
+					<h3 class="hero__title-h3">Find the
+						next event you’ll want to attend</h3>
+					<button class="btn btn-primary btn-center">
+						<a href="#" class="btn__link">Join us now</a>
+					</button>
+				</div>
+				<div class="hero__image">
+					<img
+						class="hero__image__main"
+						src="/assets/initiatives.7ec97486.svg"
+						alt="Women in
+						Ethics &amp; Compliance Global"
+					/>
+				</div>
+			</section>
+
+			<main class="main pb-3">
+				<!-- Eventbrite Section -->
+				<section class="content-section">
+					<div class="content-section__center">
+						<h2 class="heading-2">Events</h2>
+
+						<div class="content-section__center">
+							<div class="content-section__copy">
+								<div id="eventbrite-widget-container-176229566377"></div>
+
+								<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+
+								<script type="text/javascript">
+									var exampleCallback = function () {
+										console.log('Order complete!');
+									};
+
+									window.EBWidgets.createWidget({
+										// Required
+										widgetType: 'checkout',
+										eventId: '176229566377',
+										iframeContainerId:
+											'eventbrite-widget-container-176229566377',
+
+										// Optional
+										iframeContainerHeight: 425, // Widget height in pixels. Defaults to a minimum of 425px if not provided
+										onOrderComplete: exampleCallback, // Method called when an order has successfully completed
+									});
+								</script>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Past Events Section -->
+				<div class="content-section">
+					<div class="content-section__center">
+						<h2 class="heading-2">Past Events</h2>
+					</div>
+				</div>
+
+				<section class="container-grid mb-7">
+					<div class="blogposts">
+						<!-- Event: Manipulation In The Workplace -->
+						<!-- <div class="blogpost">
+							<img
+								src="/assets/img/events/2021-09-29-manipulation-in-the-workplace.png"
+								alt="Manipulation In The Workplace"
+								class="blogpost__image"
+							/>
+							<div class="blogpost__container">
+								<div class="blogpost__info">
+									<div class="blogpost__date">September 29th, 2021</div>
+								</div>
+								<div class="blogpost__description">
+									<div class="blogpost__title">
+										<h2 class="heading-2">Manipulation In The Workplace</h2>
+									</div>
+									<div class="blogpost__intro">
+										Effective persuasion and influence techniques for the good
+										of yourself, colleagues and your organisation
+									</div>
+								</div>
+							</div>
+						</div> -->
+
+						<!-- Event: Don't Let Zombie Ethics Destroy Your Compliance Practice! -->
+						<div class="blogpost">
+							<img
+								src="/assets/2021-08-31-event-leading-with-ethical-intelligence.c9562ab7.png"
+								alt="Don't Let Zombie Ethics Destroy Your Compliance Practice! - Six wrong ideas about ethics you cannot afford to keep alive"
+								class="blogpost__image"
+							/>
+							<div class="blogpost__container">
+								<div class="blogpost__info">
+									<div class="blogpost__date">August 31st, 2021</div>
+								</div>
+								<div class="blogpost__description">
+									<div class="blogpost__title">
+										<h2 class="heading-2">
+											Don't Let Zombie Ethics Destroy Your Compliance Practice!
+										</h2>
+									</div>
+									<div class="blogpost__intro">
+										Six wrong ideas about ethics you cannot afford to keep alive
+										with Bruce Weinstein
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Event: Instituting A Compliance Program -->
+						<div class="blogpost">
+							<img
+								src="/assets/2021-08-26-event-interview-preparation-101.50c9bda6.png"
+								alt="Interview Preparation 101 - What are the do's and dont's?"
+								class="blogpost__image"
+							/>
+							<div class="blogpost__container">
+								<div class="blogpost__info">
+									<div class="blogpost__date">August 26th, 2021</div>
+								</div>
+								<div class="blogpost__description">
+									<div class="blogpost__title">
+										<h2 class="heading-2">Interview Preparation 101</h2>
+									</div>
+									<div class="blogpost__intro">
+										What are the do's and dont's? with Elizabeth Willetts
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Event: Instituting A Compliance Program -->
+						<div class="blogpost">
+							<img
+								src="/assets/2021-08-16-event-instituting-a-compliance-program.22a6badc.png"
+								alt="Instituting A Compliance Program - When do I get to yell?"
+								class="blogpost__image"
+							/>
+							<div class="blogpost__container">
+								<div class="blogpost__info">
+									<div class="blogpost__date">August 16th, 2021</div>
+								</div>
+								<div class="blogpost__description">
+									<div class="blogpost__title">
+										<h2 class="heading-2">Instituting a Compliance Program</h2>
+									</div>
+									<div class="blogpost__intro">
+										When do I get to yell? with Animah Kosai, Stef Tschida &
+										Lisa Beth Lentini Walker
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Event: Ethical Blindness -->
+						<div class="blogpost">
+							<img
+								src="/assets/2021-06-29-event-ethical-blindness.6d53af24.png"
+								alt="Ethical Blindness - Why good people do bad things with Dr. Bettina Palazzo"
+								class="blogpost__image"
+							/>
+							<div class="blogpost__container">
+								<div class="blogpost__info">
+									<div class="blogpost__date">June 29th, 2021</div>
+								</div>
+								<div class="blogpost__description">
+									<div class="blogpost__title">
+										<h2 class="heading-2">Ethical Blindness</h2>
+									</div>
+									<div class="blogpost__intro">
+										Why good people do bad things with Dr. Bettina Palazzo
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Event: You Investing & ESG -->
+						<div class="blogpost">
+							<img
+								src="/assets/2021-05-20-event-you-investing-esg.ef018338.png"
+								alt="You Investing & ESG - Aligning your pension with your values with Georgia Stewart"
+								class="blogpost__image"
+							/>
+							<div class="blogpost__container">
+								<div class="blogpost__info">
+									<div class="blogpost__date">May 20th, 2021</div>
+								</div>
+								<div class="blogpost__description">
+									<div class="blogpost__title">
+										<h2 class="heading-2">You Investing & ESG</h2>
+									</div>
+									<div class="blogpost__intro">
+										Aligning your pension with your values with Georgia Stewart
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="blogpost">
+							<img
+								src="/assets/2021-04-29-event-meet-the-women-behind-wec-global.a6fa19b7.png"
+								alt="Meet the Women Behind WEC Global"
+								class="blogpost__image"
+							/>
+							<div class="blogpost__container">
+								<div class="blogpost__info">
+									<div class="blogpost__date">April 29th, 2021</div>
+								</div>
+								<div class="blogpost__description">
+									<div class="blogpost__title">
+										<h2 class="heading-2">Meet the Women Behind WEC Global</h2>
+									</div>
+									<div class="blogpost__intro">
+										Discover what bind us together
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+
+			<!-- Footer Partial -->
+			<footer class="footer bg-color-dark-shades">
+				<img class="logo footer__logo" src="/assets/logo.4586e66e.svg" alt="WEC Global" />
+				<div class="footer__navigation">
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a
+								target="_blank"
+								href="/assets/docs/Privacy Statement.pdf"
+								class="footer__link"
+								>Privacy Statement
+							</a>
+						</li>
+						<li class="footer__item">
+							<a
+								target="_blank"
+								href="/assets/docs/Cookies Policy.pdf"
+								class="footer__link"
+								>Cookies Policy
+							</a>
+						</li>
+						<li class="footer__item">
+							<a
+								target="_blank"
+								href="/assets/docs/Code of Ethics.pdf"
+								class="footer__link"
+								>Code of Ethics
+							</a>
+						</li>
+						<li class="footer__item">
+							<a
+								target="_blank"
+								href="/assets/docs/Terms of Use.pdf"
+								class="footer__link"
+								>Terms of Use
+							</a>
+						</li>
+						<li class="footer__item">
+							<a
+								href="https://www.linkedin.com/company/woman-in-ethics-compliance-global/"
+								class="footer__link"
+								target="_blank"
+							>
+								<img
+									class="footer__link__social"
+									src="/assets/linkedin.a6501208.svg"
+									alt="Linkedin"
+								/>
+							</a>
+						</li>
+						<li class="footer__item">
+							<a
+								href="https://www.instagram.com/wec_global/"
+								class="footer__link"
+								target="_blank"
+							>
+								<img
+									class="footer__link__social"
+									src="/assets/instagram.c5f2d117.svg"
+									alt="Instagram"
+								/>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</footer>
+			<!-- End of Footer -->
+		</div>
+	</body>
+</html>
