@@ -7,10 +7,10 @@
 		"serve": "vite preview"
 	},
 	"devDependencies": {
-		"autoprefixer": "^10.3.7",
-		"postcss": "^8.3.9",
-		"sass": "^1.43.2",
-		"vite": "^2.6.7",
+		"autoprefixer": "^10.4.0",
+		"postcss": "^8.3.11",
+		"sass": "^1.43.4",
+		"vite": "^2.6.13",
 		"vite-plugin-handlebars": "^1.6.0"
 	}
 }
