@@ -15,32 +15,27 @@
 			<main class="main pb-3">
 				<!-- Eventbrite Section -->
 				<section class="content-section">
-					<div class="content-section__center">
-						<div class="content-section__center">
-							<div class="content-section__copy">
-								<div id="eventbrite-widget-container-206651699797"></div>
+					<div class="content-section__copy">
+						<div id="eventbrite-widget-container-206651699797"></div>
 
-								<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+						<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
 
-								<script type="text/javascript">
-									var exampleCallback = function () {
-										console.log('Order complete!');
-									};
+						<script type="text/javascript">
+							var exampleCallback = function () {
+								console.log('Order complete!');
+							};
 
-									window.EBWidgets.createWidget({
-										// Required
-										widgetType: 'checkout',
-										eventId: '206651699797',
-										iframeContainerId:
-											'eventbrite-widget-container-206651699797',
+							window.EBWidgets.createWidget({
+								// Required
+								widgetType: 'checkout',
+								eventId: '206651699797',
+								iframeContainerId: 'eventbrite-widget-container-206651699797',
 
-										// Optional
-										iframeContainerHeight: 425, // Widget height in pixels. Defaults to a minimum of 425px if not provided
-										onOrderComplete: exampleCallback, // Method called when an order has successfully completed
-									});
-								</script>
-							</div>
-						</div>
+								// Optional
+								iframeContainerHeight: 425, // Widget height in pixels. Defaults to a minimum of 425px if not provided
+								onOrderComplete: exampleCallback, // Method called when an order has successfully completed
+							});
+						</script>
 					</div>
 				</section>
 
@@ -53,6 +48,31 @@
 
 				<section class="container-grid mb-7">
 					<div class="blogposts">
+						<!-- Event: How Ethical And Unethical Decisions Get Made -->
+						<div class="blogpost">
+							<img
+								src="/assets/img/events/2021-11-10-how-ethical-and-unethical-decisions-get-made.png"
+								alt="How Ethical And Unethical Decisions Get Made"
+								class="blogpost__image"
+							/>
+							<div class="blogpost__container">
+								<div class="blogpost__info">
+									<div class="blogpost__date">November 10th, 2021</div>
+								</div>
+								<div class="blogpost__description">
+									<div class="blogpost__title">
+										<h2 class="heading-2">
+											How Ethical And Unethical Decisions Get Made
+										</h2>
+									</div>
+									<div class="blogpost__intro">
+										A story from inside the room where it happened with Jeff
+										Kluge
+									</div>
+								</div>
+							</div>
+						</div>
+
 						<!-- Event: Overcoming Fear Of Failing As You Step Up In Your Career -->
 						<div class="blogpost">
 							<img
@@ -77,6 +97,7 @@
 							</div>
 						</div>
 
+						<!-- Event: Update On The U.S. Sanctions -->
 						<div class="blogpost">
 							<img
 								src="/assets/img/events/2021-10-08-event-update-on-the-us-sanctions.png"
