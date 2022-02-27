@@ -8,9 +8,12 @@
 	},
 	"devDependencies": {
 		"autoprefixer": "^10.4.2",
-		"postcss": "^8.4.6",
-		"sass": "^1.49.7",
-		"vite": "^2.8.2",
+		"postcss": "^8.4.7",
+		"sass": "^1.49.9",
+		"vite": "^2.8.4",
 		"vite-plugin-handlebars": "^1.6.0"
+	},
+	"dependencies": {
+		"prettier": "^2.5.1"
 	}
 }
