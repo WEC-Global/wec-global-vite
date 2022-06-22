@@ -43,6 +43,12 @@
 		object-fit: cover;
 	}
 
+	&__article-image {
+		width: 100%;
+		max-height: 350px;
+		object-fit: cover;
+	}
+
 	&__info {
 		display: flex;
 		flex-direction: row;

@@ -1,504 +1,480 @@
 <!DOCTYPE html>
 <html lang="en">
-	<!-- prettier-ignore -->
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.ba1111b2.png" />
-		<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAABNZJREFUWEedV21sU1UYfk5vt3Z07gu2bNmgSUemwyErCHHCJoN1cwkMgquiCy7RH2pEY2KMARP/+tOEXxoTmEoUw4SBgYW5ZYhDfgzxM47APiLYhVmyrtvardDbY+69537f23aeP+09977P+77P+3UO8e96zks50kOAHQBxUgoQABTQ/BEeAEKEXcJemt+zt9LH4tLsCLJUQBbleFCMIMV3E//u4A8gaFK1auTZ9wqOgCHKM2DBFmawRkpnuGKC4pXWPHqZ+FuCSYByktRKltlfk+d2BjJ2KUWS1LcEZWJ0pGnh06myZM46CMagSNHwtwRpehAxG1jA7RlycAQVpWsQuhdOQ6PZFcmAFS0zSFVFKY68fQgbfOvwxgcf4+b43xkRZRQ1BBZJos1lmQOtekII9rc14pXOVoydvYTQL3+iN7qEUGxZTHixaLRLp0NCEhlQQdNGWxfZstUleP9wF9ZyBNe/PIul6DzCSR59c3Esp7InlfgDnVSpT23d6v4LuuUGQdC2cxve7OrARP8wJkdGIei7Hk9gNJ4Q/69kEX8gSKWuk3kVF+bj3ddfRG1JIUY/P43Y/QhmkzwG55cxk+QzA5icEqug06qVqInPjGvYUof3XnsBocvXcHvoKlKU4rd4AtdiCSR1DghwrFtqYi4HV/0Vio/lgJps0qY5cSjqytego6wIC/fCcBcVoOiZBhzrG8JMeDYLz7XprPRRqbiNjcgOrczJoekRNypyODg4DuubG1AdaETvwI/46swglhMP9G2aARk9N+JbhsCy9TBiHnXlYLvHBQ/ngLsgH3X7AvDUVOOTk+cwNHIDckJRVltCNEw5puzRDDlgQ0cOAZ5c5UL9qlw4CUGxtxL+5/di+mESRz/6FNGFWNZh+R+dUMUu5BzYWeTBOk7oOgTerZtwfGwKf03czdIAgQGlDAXyiJjApnZgA7ex1ocjhw/h/ngIUxcHkYzM4tvoEqYfPBQlxPhnKPE0DNh3xdwcJ149uAcdzzbh9t0I5mMJxBbj6PvmNMamZ0wlbG0/c1gZRrazgH3IUGp8VTj61svI8xRgMhQBn6K4eWsc5y5cwsKiGvtsm7qZAdEQcx1wnANdB1rx0v5WTE5HMDufwHIigf6BYfz86+9mJ+0cMuxbhsBqku1peRrdB/dh4p8IknwK/4bD+OLUGczNRRnlmjOfbI5BmRUrmauAgWzbsgkd7a1itrtzOdRVl6F/+Ccc//oCFhbjGgYs1BjZ0DynN8AgWLPeh/bWZpSuLgHHcfCWFyDfTXDi1EWc//4qeD5lTkBNZzcfYHVlaJWrZm8ExU9t3Yzmpu1wu3KR53LCV1WMaCSCYyd6ceOPW0oZ6xVap2VWJyL9KJGe8j0eBJobsbl+I4STUUlBHnyVRXjnQ+FIdkfnjU61kuQSNZIBaY5jmU69VRXlaG/bDe/aStGQz3pOYupOSBGzPewzndkdSNjHdrUtKH7i8VpseKwG3/UPYDEm9AMr1RanYtM4NrHBhNjVSg9h7BfZth/5Wicnody4TcPaZpTKs57pX+mdSqtGvJpRQJhn6gDJNMvS5YwiKzOnApv5obx6OTUKiimqXj4zHt2zMcpQAaC4Qvy7Dnipw9FDQHYAcEqK9AMoUyWsgDu5UfGgdISmUt3/ARQi6vZ9CgNGAAAAAElFTkSuQmCC" />
-		<link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAgxJREFUOE9Vk0trFFEQhb+bcWQG0aAYI0ExCEEQQdsXhkjGcZxN0I1kFN2p2eYfCK5cuxZXghoUYhBkFmJEA4OIClmpEAImUdGNjwmJo6G75Na9t7vtTXfX41TVqVMmqo1OYMx5EIM+9iX+nfvyXnW5RxC5b6JTjcRFC2JcskmDXJbC5QE0wFi7WADR2uJN+u0TjVAqrqdxpsrD5gyrvzseTFO1rInqDcm15ezWD+wd6OfS8CE+P3/JrY9fWYmT3IC2okE7SK1+jHWFAhdPV9m39odXrbc8Xe7wK5ccmNK3AniLTiZwpT7Iti/f+LAW82hugSQ4NFJn15r6d8ADOLML6CsWqGwsc3AoYnFTN3cev+BHexkkTGscgHLgSVSDBjhnl+WgXGR4azcDJwa5NjVNe2XVbU87dT1kHIR9BWQMZ0cqVI8d4c1Uk3uz7/grnt0gA1vMbcFpwNgAY+jt2cL45XOUNmzmybMW0zMt4jhOFZQXWtqBz7VYjI9dYEffLhaX5rl5e5I4SVLi/PoRccOmW8imh3K5RK1ynMrQUYp0uDvZ5PXs+4x7FZvbxX9rzMo45/beHkbqNQ7v38PV6zf4/rOdnYoPzq0xaD4Q5aRq43b372Rh6RNxnF2SXo+lLD0mNQgmXI22GDTnpeOTgpzs2Zno5OgEXfac3UXqNsNxWbAgO99Y7ijFCA/+ATMh5e3TtvhRAAAAAElFTkSuQmCC" />
-		<link rel="manifest" href="data:application/manifest+json;base64,ewoJIm5hbWUiOiAiV29tZW4gaW4gRXRoaWNzICYgQ29tcGxpYW5jZSBHbG9iYWwiLAoJInNob3J0X25hbWUiOiAiV0VDLUdsb2JhbCIsCgkiaWNvbnMiOiBbCgkJewoJCQkic3JjIjogIi4vYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLAoJCQkic2l6ZXMiOiAiMTkyeDE5MiIsCgkJCSJ0eXBlIjogImltYWdlL3BuZyIKCQl9LAoJCXsKCQkJInNyYyI6ICIuL2FuZHJvaWQtY2hyb21lLTUxMng1MTIucG5nIiwKCQkJInNpemVzIjogIjUxMng1MTIiLAoJCQkidHlwZSI6ICJpbWFnZS9wbmciCgkJfQoJXSwKCSJ0aGVtZV9jb2xvciI6ICIjZmZmZmZmIiwKCSJiYWNrZ3JvdW5kX2NvbG9yIjogIiNmZmZmZmYiLAoJImRpc3BsYXkiOiAic3RhbmRhbG9uZSIKfQo=" />
+<!-- prettier-ignore -->
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.ba1111b2.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAABNZJREFUWEedV21sU1UYfk5vt3Z07gu2bNmgSUemwyErCHHCJoN1cwkMgquiCy7RH2pEY2KMARP/+tOEXxoTmEoUw4SBgYW5ZYhDfgzxM47APiLYhVmyrtvardDbY+69537f23aeP+09977P+77P+3UO8e96zks50kOAHQBxUgoQABTQ/BEeAEKEXcJemt+zt9LH4tLsCLJUQBbleFCMIMV3E//u4A8gaFK1auTZ9wqOgCHKM2DBFmawRkpnuGKC4pXWPHqZ+FuCSYByktRKltlfk+d2BjJ2KUWS1LcEZWJ0pGnh06myZM46CMagSNHwtwRpehAxG1jA7RlycAQVpWsQuhdOQ6PZFcmAFS0zSFVFKY68fQgbfOvwxgcf4+b43xkRZRQ1BBZJos1lmQOtekII9rc14pXOVoydvYTQL3+iN7qEUGxZTHixaLRLp0NCEhlQQdNGWxfZstUleP9wF9ZyBNe/PIul6DzCSR59c3Esp7InlfgDnVSpT23d6v4LuuUGQdC2cxve7OrARP8wJkdGIei7Hk9gNJ4Q/69kEX8gSKWuk3kVF+bj3ddfRG1JIUY/P43Y/QhmkzwG55cxk+QzA5icEqug06qVqInPjGvYUof3XnsBocvXcHvoKlKU4rd4AtdiCSR1DghwrFtqYi4HV/0Vio/lgJps0qY5cSjqytego6wIC/fCcBcVoOiZBhzrG8JMeDYLz7XprPRRqbiNjcgOrczJoekRNypyODg4DuubG1AdaETvwI/46swglhMP9G2aARk9N+JbhsCy9TBiHnXlYLvHBQ/ngLsgH3X7AvDUVOOTk+cwNHIDckJRVltCNEw5puzRDDlgQ0cOAZ5c5UL9qlw4CUGxtxL+5/di+mESRz/6FNGFWNZh+R+dUMUu5BzYWeTBOk7oOgTerZtwfGwKf03czdIAgQGlDAXyiJjApnZgA7ex1ocjhw/h/ngIUxcHkYzM4tvoEqYfPBQlxPhnKPE0DNh3xdwcJ149uAcdzzbh9t0I5mMJxBbj6PvmNMamZ0wlbG0/c1gZRrazgH3IUGp8VTj61svI8xRgMhQBn6K4eWsc5y5cwsKiGvtsm7qZAdEQcx1wnANdB1rx0v5WTE5HMDufwHIigf6BYfz86+9mJ+0cMuxbhsBqku1peRrdB/dh4p8IknwK/4bD+OLUGczNRRnlmjOfbI5BmRUrmauAgWzbsgkd7a1itrtzOdRVl6F/+Ccc//oCFhbjGgYs1BjZ0DynN8AgWLPeh/bWZpSuLgHHcfCWFyDfTXDi1EWc//4qeD5lTkBNZzcfYHVlaJWrZm8ExU9t3Yzmpu1wu3KR53LCV1WMaCSCYyd6ceOPW0oZ6xVap2VWJyL9KJGe8j0eBJobsbl+I4STUUlBHnyVRXjnQ+FIdkfnjU61kuQSNZIBaY5jmU69VRXlaG/bDe/aStGQz3pOYupOSBGzPewzndkdSNjHdrUtKH7i8VpseKwG3/UPYDEm9AMr1RanYtM4NrHBhNjVSg9h7BfZth/5Wicnody4TcPaZpTKs57pX+mdSqtGvJpRQJhn6gDJNMvS5YwiKzOnApv5obx6OTUKiimqXj4zHt2zMcpQAaC4Qvy7Dnipw9FDQHYAcEqK9AMoUyWsgDu5UfGgdISmUt3/ARQi6vZ9CgNGAAAAAElFTkSuQmCC" />
+	<link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAgxJREFUOE9Vk0trFFEQhb+bcWQG0aAYI0ExCEEQQdsXhkjGcZxN0I1kFN2p2eYfCK5cuxZXghoUYhBkFmJEA4OIClmpEAImUdGNjwmJo6G75Na9t7vtTXfX41TVqVMmqo1OYMx5EIM+9iX+nfvyXnW5RxC5b6JTjcRFC2JcskmDXJbC5QE0wFi7WADR2uJN+u0TjVAqrqdxpsrD5gyrvzseTFO1rInqDcm15ezWD+wd6OfS8CE+P3/JrY9fWYmT3IC2okE7SK1+jHWFAhdPV9m39odXrbc8Xe7wK5ccmNK3AniLTiZwpT7Iti/f+LAW82hugSQ4NFJn15r6d8ADOLML6CsWqGwsc3AoYnFTN3cev+BHexkkTGscgHLgSVSDBjhnl+WgXGR4azcDJwa5NjVNe2XVbU87dT1kHIR9BWQMZ0cqVI8d4c1Uk3uz7/grnt0gA1vMbcFpwNgAY+jt2cL45XOUNmzmybMW0zMt4jhOFZQXWtqBz7VYjI9dYEffLhaX5rl5e5I4SVLi/PoRccOmW8imh3K5RK1ynMrQUYp0uDvZ5PXs+4x7FZvbxX9rzMo45/beHkbqNQ7v38PV6zf4/rOdnYoPzq0xaD4Q5aRq43b372Rh6RNxnF2SXo+lLD0mNQgmXI22GDTnpeOTgpzs2Zno5OgEXfac3UXqNsNxWbAgO99Y7ijFCA/+ATMh5e3TtvhRAAAAAElFTkSuQmCC" />
+	<link rel="manifest" href="data:application/manifest+json;base64,ewoJIm5hbWUiOiAiV29tZW4gaW4gRXRoaWNzICYgQ29tcGxpYW5jZSBHbG9iYWwiLAoJInNob3J0X25hbWUiOiAiV0VDLUdsb2JhbCIsCgkiaWNvbnMiOiBbCgkJewoJCQkic3JjIjogIi4vYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLAoJCQkic2l6ZXMiOiAiMTkyeDE5MiIsCgkJCSJ0eXBlIjogImltYWdlL3BuZyIKCQl9LAoJCXsKCQkJInNyYyI6ICIuL2FuZHJvaWQtY2hyb21lLTUxMng1MTIucG5nIiwKCQkJInNpemVzIjogIjUxMng1MTIiLAoJCQkidHlwZSI6ICJpbWFnZS9wbmciCgkJfQoJXSwKCSJ0aGVtZV9jb2xvciI6ICIjZmZmZmZmIiwKCSJiYWNrZ3JvdW5kX2NvbG9yIjogIiNmZmZmZmYiLAoJImRpc3BsYXkiOiAic3RhbmRhbG9uZSIKfQo=" />
+
+	<!--  Essential META Tags -->
+	<meta property="title" content="Blow that Whistle!" />
+	<meta
+		property="og:description"
+		content="A unique and exciting space for brilliant and smart-minded women in ethics and compliance to connect, learn and collaborate"
+	/>
+	<!-- Meta Image -->
+	<meta property="og:image" content="https://wec-global.org/assets/blow-that-whistle.da180fdb.jpg" />
+	<!-- Meta URL -->
+	<meta property="og:url" content="https://wec-global.org/blogs/blow-that-whistle.html" />
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script
+		async
+		src="https://www.googletagmanager.com/gtag/js?id=UA-201399005-1"
+	></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
 	
-		<!--  Essential META Tags -->
-		<meta property="title" content="Blow that Whistle!" />
-		<meta
-			property="og:description"
-			content="A unique and exciting space for brilliant and smart-minded women in ethics and compliance to connect, learn and collaborate"
-		/>
-		<!-- Meta Image -->
-		<meta property="og:image" content="https://wec-global.org/assets/blow-that-whistle.da180fdb.jpg" />
-		<!-- Meta URL -->
-		<meta property="og:url" content="https://wec-global.org/blogs/blow-that-whistle.html" />
+		gtag('config', 'UA-201399005-1');
+	</script>
+	<!-- /Global site tag (gtag.js) - Google Analytics -->
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+		rel="stylesheet"
+	/>
+	<!-- CSS -->
 	
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script
-			async
-			src="https://www.googletagmanager.com/gtag/js?id=UA-201399005-1"
-		></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag('js', new Date());
-		
-			gtag('config', 'UA-201399005-1');
-		</script>
-		<!-- /Global site tag (gtag.js) - Google Analytics -->
-	
-		<!-- Font -->
-		<link rel="preconnect" href="https://fonts.gstatic.com" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
-			rel="stylesheet"
-		/>
-		<!-- CSS -->
-		
-		<!-- <link rel="stylesheet" href="/scss/style.scss" /> -->
-	
-		<!-- Cookie Consent by https://www.FreePrivacyPolicy.com -->
-		<script
-			type="text/javascript"
-			src="//www.freeprivacypolicy.com/public/cookie-consent/3.1.0/cookie-consent.js"
-		></script>
-		<script type="text/javascript">
-			document.addEventListener('DOMContentLoaded', function () {
-				cookieconsent.run({
-					notice_banner_type: 'headline',
-					consent_type: 'express',
-					palette: 'light',
-					language: 'en',
-					website_name: 'WEC Global',
-					cookies_policy_url:
-						'https://wec-global.org/assets/docs/Cookies%20Policy.pdf',
-				});
+	<!-- <link rel="stylesheet" href="/scss/style.scss" /> -->
+
+	<!-- Cookie Consent by https://www.FreePrivacyPolicy.com -->
+	<script
+		type="text/javascript"
+		src="//www.freeprivacypolicy.com/public/cookie-consent/3.1.0/cookie-consent.js"
+	></script>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function () {
+			cookieconsent.run({
+				notice_banner_type: 'headline',
+				consent_type: 'express',
+				palette: 'light',
+				language: 'en',
+				website_name: 'WEC Global',
+				cookies_policy_url:
+					'https://wec-global.org/assets/docs/Cookies%20Policy.pdf',
 			});
-		</script>
-		
-		<noscript
-			>Cookie Consent by
-			<a
-				href="https://www.FreePrivacyPolicy.com/free-cookie-consent/"
-				rel="nofollow noopener"
-				>FreePrivacyPolicy.com</a
-			></noscript
-		>
-		<!-- End Cookie Consent -->
-		
-		<title>WEC Global | Blow that Whistle!</title>
-		<script type="module" crossorigin src="/assets/script.2945bc78.js"></script>
-		<link rel="stylesheet" href="/assets/script.a0e069a9.css">
-	</head>
+		});
+	</script>
+	
+	<noscript
+		>Cookie Consent by
+		<a
+			href="https://www.FreePrivacyPolicy.com/free-cookie-consent/"
+			rel="nofollow noopener"
+			>FreePrivacyPolicy.com</a
+		></noscript
+	>
+	<!-- End Cookie Consent -->
+	
+	<title>WEC Global | Blow that Whistle!</title>
+  <script type="module" crossorigin src="/assets/script.53853695.js"></script>
+  <link rel="stylesheet" href="/assets/script.bd94349a.css">
+</head>
 
-	<body>
-		<div class="container">
-			<!-- Header -->
-			<header class="header">
-				<a href="/index.html" class="header__logo-link">
-					<img
-						class="header__logo"
-						src="/assets/logo_dark_horizontal.3da46b72.svg"
-						alt="WEC Global"
-					/>
-				</a>
-			
-				<input type="checkbox" id="hamburger-check" />
-				<div class="hamburger-btn">
-					<label for="hamburger-check">
-						<span></span>
-						<span></span>
-						<span></span>
-					</label>
-				</div>
-			
-				<nav class="header__nav">
-					<ul class="header__list">
-						<li class="header__item">
-							<a href="/about.html" class="header__link ">About</a>
-						</li>
-						<li class="header__item">
-							<a href="#" class="header__link ">Join</a>
-							<ul class="header__sublist">
-								<li class="header__item">
-									<a href="/membership.html" class="header__link "
-										>Membership</a
-									>
-								</li>
-								<li class="header__item">
-									<a href="/friend.html" class="header__link ">Friend</a>
-								</li>
-							</ul>
-						</li>
-						<li class="header__item">
-							<a href="/initiatives.html" class="header__link "
-								>Initiatives</a
-							>
-						</li>
-						<li class="header__item">
-							<a href="/team.html" class="header__link ">Team</a>
-						</li>
-						<li class="header__item">
-							<a href="/media.html" class="header__link header__link--active">Media</a>
-						</li>
-						<li class="header__item">
-							<a href="/contact.html" class="header__link ">Contact</a>
-						</li>
-					</ul>
-				</nav>
-			</header>
-			<!-- End of Header -->
+<body>
+	<div class="container">
+		<!-- Header -->
+		<header class="header">
+			<a href="/index.html" class="header__logo-link">
+				<img
+					class="header__logo"
+					src="/assets/logo_dark_horizontal.3da46b72.svg"
+					alt="WEC Global"
+				/>
+			</a>
+		
+			<input type="checkbox" id="hamburger-check" />
+			<div class="hamburger-btn">
+				<label for="hamburger-check">
+					<span></span>
+					<span></span>
+					<span></span>
+				</label>
+			</div>
+		
+			<nav class="header__nav">
+				<ul class="header__list">
+					<li class="header__item">
+						<a href="/about.html" class="header__link ">About</a>
+					</li>
+					<li class="header__item">
+						<a href="#" class="header__link ">Join</a>
+						<ul class="header__sublist">
+							<li class="header__item">
+								<a href="/membership.html" class="header__link "
+									>Membership</a
+								>
+							</li>
+							<li class="header__item">
+								<a href="/friend.html" class="header__link ">Friend</a>
+							</li>
+						</ul>
+					</li>
+					<li class="header__item">
+						<a href="/initiatives.html" class="header__link "
+							>Initiatives</a
+						>
+					</li>
+					<li class="header__item">
+						<a href="/team.html" class="header__link ">Team</a>
+					</li>
+					<li class="header__item">
+						<a href="/media.html" class="header__link header__link--active">Media</a>
+					</li>
+					<li class="header__item">
+						<a href="/contact.html" class="header__link ">Contact</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<!-- End of Header -->
 
-			<!-- Hero Banner -->
-			<!-- prettier-ignore -->
-			<section class="hero">
-				<div class="hero__title hero__blog">
-					<h1 class="hero__title-h1">Read our Latest Blogs</h1>
-					<h3 class="hero__title-h3">A journal on ethics, compliance, life, and more</h3>
-					<button class="btn btn-primary btn-center">
-						<a href="#" class="btn__link">Join us now</a>
-					</button>
+		<!-- Hero Banner -->
+		<!-- prettier-ignore -->
+		<section class="hero">
+			<div class="hero__title hero__blog">
+				<h1 class="hero__title-h1">Read our Latest Blogs</h1>
+				<h3 class="hero__title-h3">A journal on ethics, compliance, life, and more</h3>
+				<button class="btn btn-primary btn-center">
+					<a href="#" class="btn__link">Join us now</a>
+				</button>
+			</div>
+			<div class="hero__image">
+				<img
+					class="hero__image__main"
+					src="/assets/blog.332be87e.svg"
+					alt="Women in Ethics &amp; Compliance Global"
+				/>
+			</div>
+		</section>
+		<!-- End of Hero Banner -->
+
+		<main class="main pb-8 pt-4">
+			<div class="content-section__center">
+				<div class="blog">
+					<div class="blog__header">
+						<div class="blog__info">
+							<div class="blog__date">October 22, 2021</div>
+							<div class="blog__author">Gizelle Handy</div>
+						</div>
+						<h2 class="heading-2 blog__title">Blow that Whistle!</h2>
+						<div class="blog__tags">
+							<div class="blog__tag">Whistleblowing</div>
+							<div class="blog__tag">Employee Empowerment</div>
+							<div class="blog__tag">Values</div>
+							<div class="blog__tag">Confidential</div>
+						</div>
+					</div>
 				</div>
-				<div class="hero__image">
-					<img
-						class="hero__image__main"
-						src="/assets/blog.332be87e.svg"
-						alt="Women in Ethics &amp; Compliance Global"
-					/>
+			</div>
+
+			<section class="blog-section-flex">
+				<!-- Author -->
+				<div class="blog-section__author">
+					<a target="_blank" href="https://www.linkedin.com/in/gizelle-handy-3439081b/">
+						<img src="/assets/Gizelle Handy.9349358d.jpg" alt="Gizelle Handy"
+							class="blog-section__author__photo" />
+					</a>
+					<div class="blog-section__author__prophile">
+						<p>
+							Gizelle Handy has worked for 30+ years in various sectors
+							including financial, retail and energy, having done several
+							roles throughout her career spanning sales, account management,
+							proposition development, product management and customer
+							experience. She was introduced to the field of Ethics and
+							Compliance by a friend and has pursued her career in this arena
+							ever since. She has worked in the Governance, Risk Management,
+							and Compliance industry for 11 years providing independent
+							whistleblowing solutions to companies. Gizelle believes in
+							empowering people to report wrongdoings by giving them a
+							platform where they can speak and be heard in a safe
+							environment.
+						</p>
+						<p>
+							Currently, Gizelle is Product Marketing Manager, International
+							at NAVEX Global. You can find Gizelle on
+							<a target="_blank" href="https://www.linkedin.com/in/gizelle-handy-3439081b/"
+								class="external-link">LinkedIn</a>.
+						</p>
+					</div>
+				</div>
+				<!-- /Author -->
+
+				<div class="blog">
+					<div class="blog__content">
+						<div class="content-section__copy">
+							<img src="/assets/blow-that-whistle.da180fdb.jpg" alt="Blow that Whistle!"
+								class="blogpost__article-image pb-2" />
+							<p class="pb-0">
+								<strong>What a Whistleblowing Hotline means</strong>
+							</p>
+							<p>
+								Implemented correctly, whistleblowing hotlines are powerful
+								tools for exposing fraud, bullying, malpractice,
+								discrimination and more.
+							</p>
+							<p>
+								Historically, the term ‘whistleblowing hotline’ referred to a
+								telephone-based reporting service. It is now used as a
+								collective term to describe all forms of whistleblowing
+								systems, including online whistleblowing.
+							</p>
+							<p>
+								A well-managed hotline is compliant, accessible, free of
+								charge at the point of use and inclusive. Ideally, employees
+								should have access to the following: a secure, easy to use,
+								and independently managed, internal reporting process 24/7/365
+								accessibility. The choice of reporting via telephone, mobile,
+								on-line or in-person so they can report in a way that is most
+								comfortable for the individual and with the option to report
+								in the whistle-blower’s native language. The hotline should be
+								confidential, enable anonymous reporting in jurisdictions
+								where allowed and facilitate on-going communication with
+								whistle-blowers who wish not to identify themselves.
+							</p>
+
+							<p class="pb-0">
+								<strong>How do they work?</strong>
+							</p>
+							<p>
+								The whistleblowing hotline provider will give the company with
+								a unique URL for web-based reporting and freephone number(s),
+								country specific, which are promoted within the business
+								through awareness materials, induction training, policies etc.
+								Awareness is key to the success of the hotline. If individuals
+								do not know that it is available and how to make a report,
+								then it has no value. There are 3 ways to make a report:
+							</p>
+							<p>
+								<strong>A. Telephone reporting:</strong> the whistle-blower
+								calls the freephone number to speak to a person and make a
+								report in their native language. An interpreter will join the
+								call as required and a three-way conversation will take place.
+								Using a series of probing and thoughtful questions, the call
+								handler gains an understanding of what occurred, those
+								involved, witnesses, and any potential impacts. To verify the
+								information, callers are read the final report. This is done
+								to ensure the information is accurate and assure the caller
+								his/her concern has been captured appropriately. At the end of
+								the call, the call handler and the whistle-blower exchange
+								information whereby the report is accessible by the caller to
+								make updates, or to check for feedback from the company.
+							</p>
+							<p>
+								<strong>B. Online reporting:</strong> the whistle-blower logs
+								on to the company specific web reporting page via the company
+								specific URL to make a report; language options may be
+								available. The whistle-blower is presented with the
+								investigative questions, these are the same questions that
+								would be asked if reporting via the telephone. When the
+								whistle-blower has finished the report, he/she will have the
+								report access information which can be used to make updates to
+								the report, or to check for feedback from the company.
+							</p>
+							<p>
+								<strong>C. Mobile reporting:</strong> the whistle-blower uses
+								the company specific URL or QR code to access the simplified
+								reporting page to make a report. As above, the questions help
+								to provide a good understanding of the concerned matter. When
+								the whistle-blower has submitted his/her report, he/she will
+								have report access information which can be used to make
+								updates to the report, or to check for feedback from the
+								company.
+							</p>
+							<p>
+								The report is processed by a member of the dispatch team and
+								is made accessible to the company’s authorised personal
+								(excluding, if applicable, any implicated parties) via a
+								secure Case Management System (CSM). Where the whistle-blower
+								has provided their contact details these will be passed to the
+								company, otherwise the report will be anonymised, and the case
+								number becomes their identity. The company’s authorised
+								personnel will receive an email alert to inform them a new or
+								update to a report has been received. The authorised personnel
+								can log on to the CMS using their unique log in details to
+								view the report, send feedback/ask further questions to the
+								whistle-blower, log the investigation, talk to colleagues,
+								access/create management reporting and more.
+							</p>
+							<p>
+								Obtaining feedback – The whistle-blower can either call the
+								freephone number to speak to someone in person, or log onto
+								the web or mobile reporting site to view the feedback that has
+								been left by the company by using his/her report access
+								information.
+							</p>
+							<p>
+								Anonymous communication can continue until a case is closed by
+								the company. The outcomes can be logged on the CMS which could
+								be substantiated, partially-substantiated, or not
+								substantiated.
+							</p>
+							<p class="pb-0">
+								<strong>What are the regulations / regulated processes in this
+									field and how does it work in reality?</strong>
+							</p>
+							<p>
+								Regulations vary between industries/countries; it is a highly
+								complex area and is a rapidly evolving landscape. Our secure
+								reporting hotlines simplify compliance to local regulations
+								and privacy laws. The incident tracking software monitors
+								where incidents happen and is configured for GDPR, SOX, EU
+								Whistleblowing Directive, CCPA and PIPEDA requirements.
+							</p>
+							<p class="pb-0">
+								<strong>What are the hidden risks/difficulties in operating a
+									whistle-blower line? What do you have to keep an eye on the
+									most?</strong>
+							</p>
+							<p>
+								Hotlines require governance, management, promotion and right
+								tone from the top: employees must have confidence in the
+								service. Watch out for common themes, which in isolation might
+								seem insignificant but can be part of a larger problem.
+								Investigations must be handled sensitively and confidentially
+								to protect the whistle-blower and the implicated party. Make
+								sure all reports are taken seriously and responded to in a
+								timely manner. Access to reports should be kept to a minimum,
+								only the people who need to know. Companies should demonstrate
+								zero tolerance to malicious reports and any retaliation on the
+								whistle-blower.
+							</p>
+							<p class="pb-0">
+								<strong>What are the biggest advantages of operating such
+									line?</strong>
+							</p>
+							<p>
+								An effective hotline promotes an <strong>open</strong>,
+								<strong>honesty</strong>, and
+								<strong>accountable culture</strong> where employees can
+								express their concerns without fear of reprisal.
+							</p>
+							<p>
+								Protecting brand reputation is often a key motivator when a
+								business chooses to introduce a whistleblowing hotline. For
+								most organisations, there is no better information source than
+								its employees. However, corrupt, and illegal behaviour often
+								goes undetected because employees fear the consequences of
+								reporting them through existing internal channels.
+							</p>
+							<p>
+								If employees or third parties do not have access to an
+								independent reporting channel provided by the organisation,
+								they may choose to use alternative public channels, such as
+								going to the press or taking legal action.
+							</p>
+							<p>
+								A whistleblowing hotline can give an organisation early
+								insight into a potential issue and reduce the likelihood of
+								potentially damaging information reaching the public domain.
+							</p>
+
+							<br />
+							<hr />
+							<br />
+
+							<p class="pb-0">
+								<strong>What is one piece of advice you would give to your younger
+									self?</strong>
+							</p>
+							<p>Try and stay strong, optimistic, and resilient.</p>
+							<p class="pb-0">
+								<strong>If you had to choose an alternative career, what would you
+									be doing now?</strong>
+							</p>
+							<p>
+								Beauty therapist for the rich and famous, have you seen the
+								price of treatments these days! I qualified as a beautician
+								when I first started working, albeit I never visit a salon.
+							</p>
+							<p class="pb-0">
+								<strong>At the end of your career, if you were to sit and reflect,
+									what one hope do you have?</strong>
+							</p>
+							<p>In the main, to have enjoyed my working life.</p>
+						</div>
+					</div>
 				</div>
 			</section>
-			<!-- End of Hero Banner -->
-
-			<main class="main pb-8 pt-4">
-				<div class="content-section__center">
-					<div class="blog">
-						<div class="blog__header">
-							<div class="blog__info">
-								<div class="blog__date">October 22, 2021</div>
-								<div class="blog__author">Gizelle Handy</div>
-							</div>
-							<h2 class="heading-2 blog__title">Blow that Whistle!</h2>
-							<div class="blog__tags">
-								<div class="blog__tag">Whistleblowing</div>
-								<div class="blog__tag">Employee Empowerment</div>
-								<div class="blog__tag">Values</div>
-								<div class="blog__tag">Confidential</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<section class="blog-section-flex">
-					<!-- Author -->
-					<div class="blog-section__author">
+		</main>
+		<!-- Footer Partial -->
+		<footer class="footer bg-color-dark-shades">
+			<img class="logo footer__logo" src="/assets/logo.4586e66e.svg" alt="WEC Global" />
+			<div class="footer__navigation">
+				<ul class="footer__list">
+					<li class="footer__item">
 						<a
 							target="_blank"
-							href="https://www.linkedin.com/in/gizelle-handy-3439081b/"
+							href="/assets/docs/Privacy Statement.pdf"
+							class="footer__link"
+							>Privacy Statement
+						</a>
+					</li>
+					<li class="footer__item">
+						<a
+							target="_blank"
+							href="/assets/docs/Cookies Policy.pdf"
+							class="footer__link"
+							>Cookies Policy
+						</a>
+					</li>
+					<li class="footer__item">
+						<a
+							target="_blank"
+							href="/assets/docs/Code of Ethics.pdf"
+							class="footer__link"
+							>Code of Ethics
+						</a>
+					</li>
+					<li class="footer__item">
+						<a
+							target="_blank"
+							href="/assets/docs/Terms of Use.pdf"
+							class="footer__link"
+							>Terms of Use
+						</a>
+					</li>
+					<li class="footer__item">
+						<a
+							href="https://www.linkedin.com/company/woman-in-ethics-compliance-global/"
+							class="footer__link"
+							target="_blank"
 						>
 							<img
-								src="/assets/Gizelle Handy.9349358d.jpg"
-								alt="Gizelle Handy"
-								class="blog-section__author__photo"
+								class="footer__link__social"
+								src="/assets/linkedin.a6501208.svg"
+								alt="Linkedin"
 							/>
 						</a>
-						<div class="blog-section__author__prophile">
-							<p>
-								Gizelle Handy has worked for 30+ years in various sectors
-								including financial, retail and energy, having done several
-								roles throughout her career spanning sales, account management,
-								proposition development, product management and customer
-								experience. She was introduced to the field of Ethics and
-								Compliance by a friend and has pursued her career in this arena
-								ever since. She has worked in the Governance, Risk Management,
-								and Compliance industry for 11 years providing independent
-								whistleblowing solutions to companies. Gizelle believes in
-								empowering people to report wrongdoings by giving them a
-								platform where they can speak and be heard in a safe
-								environment.
-							</p>
-							<p>
-								Currently, Gizelle is Product Marketing Manager, International
-								at NAVEX Global. You can find Gizelle on
-								<a
-									target="_blank"
-									href="https://www.linkedin.com/in/gizelle-handy-3439081b/"
-									class="external-link"
-									>LinkedIn</a
-								>.
-							</p>
-						</div>
-					</div>
-					<!-- /Author -->
+					</li>
+					<li class="footer__item">
+						<a
+							href="https://www.instagram.com/wec_global/"
+							class="footer__link"
+							target="_blank"
+						>
+							<img
+								class="footer__link__social"
+								src="/assets/instagram.c5f2d117.svg"
+								alt="Instagram"
+							/>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+		<!-- End of Footer -->
+	</div>
+</body>
 
-					<div class="blog">
-						<div class="blog__content">
-							<div class="content-section__copy">
-								<img
-									src="/assets/blow-that-whistle.da180fdb.jpg"
-									alt="Blow that Whistle!"
-									class="blogpost__image pb-2"
-								/>
-								<p class="pb-0">
-									<strong>What a Whistleblowing Hotline means</strong>
-								</p>
-								<p>
-									Implemented correctly, whistleblowing hotlines are powerful
-									tools for exposing fraud, bullying, malpractice,
-									discrimination and more.
-								</p>
-								<p>
-									Historically, the term ‘whistleblowing hotline’ referred to a
-									telephone-based reporting service. It is now used as a
-									collective term to describe all forms of whistleblowing
-									systems, including online whistleblowing.
-								</p>
-								<p>
-									A well-managed hotline is compliant, accessible, free of
-									charge at the point of use and inclusive. Ideally, employees
-									should have access to the following: a secure, easy to use,
-									and independently managed, internal reporting process 24/7/365
-									accessibility. The choice of reporting via telephone, mobile,
-									on-line or in-person so they can report in a way that is most
-									comfortable for the individual and with the option to report
-									in the whistle-blower’s native language. The hotline should be
-									confidential, enable anonymous reporting in jurisdictions
-									where allowed and facilitate on-going communication with
-									whistle-blowers who wish not to identify themselves.
-								</p>
-
-								<p class="pb-0">
-									<strong>How do they work?</strong>
-								</p>
-								<p>
-									The whistleblowing hotline provider will give the company with
-									a unique URL for web-based reporting and freephone number(s),
-									country specific, which are promoted within the business
-									through awareness materials, induction training, policies etc.
-									Awareness is key to the success of the hotline. If individuals
-									do not know that it is available and how to make a report,
-									then it has no value. There are 3 ways to make a report:
-								</p>
-								<p>
-									<strong>A. Telephone reporting:</strong> the whistle-blower
-									calls the freephone number to speak to a person and make a
-									report in their native language. An interpreter will join the
-									call as required and a three-way conversation will take place.
-									Using a series of probing and thoughtful questions, the call
-									handler gains an understanding of what occurred, those
-									involved, witnesses, and any potential impacts. To verify the
-									information, callers are read the final report. This is done
-									to ensure the information is accurate and assure the caller
-									his/her concern has been captured appropriately. At the end of
-									the call, the call handler and the whistle-blower exchange
-									information whereby the report is accessible by the caller to
-									make updates, or to check for feedback from the company.
-								</p>
-								<p>
-									<strong>B. Online reporting:</strong> the whistle-blower logs
-									on to the company specific web reporting page via the company
-									specific URL to make a report; language options may be
-									available. The whistle-blower is presented with the
-									investigative questions, these are the same questions that
-									would be asked if reporting via the telephone. When the
-									whistle-blower has finished the report, he/she will have the
-									report access information which can be used to make updates to
-									the report, or to check for feedback from the company.
-								</p>
-								<p>
-									<strong>C. Mobile reporting:</strong> the whistle-blower uses
-									the company specific URL or QR code to access the simplified
-									reporting page to make a report. As above, the questions help
-									to provide a good understanding of the concerned matter. When
-									the whistle-blower has submitted his/her report, he/she will
-									have report access information which can be used to make
-									updates to the report, or to check for feedback from the
-									company.
-								</p>
-								<p>
-									The report is processed by a member of the dispatch team and
-									is made accessible to the company’s authorised personal
-									(excluding, if applicable, any implicated parties) via a
-									secure Case Management System (CSM). Where the whistle-blower
-									has provided their contact details these will be passed to the
-									company, otherwise the report will be anonymised, and the case
-									number becomes their identity. The company’s authorised
-									personnel will receive an email alert to inform them a new or
-									update to a report has been received. The authorised personnel
-									can log on to the CMS using their unique log in details to
-									view the report, send feedback/ask further questions to the
-									whistle-blower, log the investigation, talk to colleagues,
-									access/create management reporting and more.
-								</p>
-								<p>
-									Obtaining feedback – The whistle-blower can either call the
-									freephone number to speak to someone in person, or log onto
-									the web or mobile reporting site to view the feedback that has
-									been left by the company by using his/her report access
-									information.
-								</p>
-								<p>
-									Anonymous communication can continue until a case is closed by
-									the company. The outcomes can be logged on the CMS which could
-									be substantiated, partially-substantiated, or not
-									substantiated.
-								</p>
-								<p class="pb-0">
-									<strong
-										>What are the regulations / regulated processes in this
-										field and how does it work in reality?</strong
-									>
-								</p>
-								<p>
-									Regulations vary between industries/countries; it is a highly
-									complex area and is a rapidly evolving landscape. Our secure
-									reporting hotlines simplify compliance to local regulations
-									and privacy laws. The incident tracking software monitors
-									where incidents happen and is configured for GDPR, SOX, EU
-									Whistleblowing Directive, CCPA and PIPEDA requirements.
-								</p>
-								<p class="pb-0">
-									<strong
-										>What are the hidden risks/difficulties in operating a
-										whistle-blower line? What do you have to keep an eye on the
-										most?</strong
-									>
-								</p>
-								<p>
-									Hotlines require governance, management, promotion and right
-									tone from the top: employees must have confidence in the
-									service. Watch out for common themes, which in isolation might
-									seem insignificant but can be part of a larger problem.
-									Investigations must be handled sensitively and confidentially
-									to protect the whistle-blower and the implicated party. Make
-									sure all reports are taken seriously and responded to in a
-									timely manner. Access to reports should be kept to a minimum,
-									only the people who need to know. Companies should demonstrate
-									zero tolerance to malicious reports and any retaliation on the
-									whistle-blower.
-								</p>
-								<p class="pb-0">
-									<strong
-										>What are the biggest advantages of operating such
-										line?</strong
-									>
-								</p>
-								<p>
-									An effective hotline promotes an <strong>open</strong>,
-									<strong>honesty</strong>, and
-									<strong>accountable culture</strong> where employees can
-									express their concerns without fear of reprisal.
-								</p>
-								<p>
-									Protecting brand reputation is often a key motivator when a
-									business chooses to introduce a whistleblowing hotline. For
-									most organisations, there is no better information source than
-									its employees. However, corrupt, and illegal behaviour often
-									goes undetected because employees fear the consequences of
-									reporting them through existing internal channels.
-								</p>
-								<p>
-									If employees or third parties do not have access to an
-									independent reporting channel provided by the organisation,
-									they may choose to use alternative public channels, such as
-									going to the press or taking legal action.
-								</p>
-								<p>
-									A whistleblowing hotline can give an organisation early
-									insight into a potential issue and reduce the likelihood of
-									potentially damaging information reaching the public domain.
-								</p>
-
-								<br />
-								<hr />
-								<br />
-
-								<p class="pb-0">
-									<strong
-										>What is one piece of advice you would give to your younger
-										self?</strong
-									>
-								</p>
-								<p>Try and stay strong, optimistic, and resilient.</p>
-								<p class="pb-0">
-									<strong
-										>If you had to choose an alternative career, what would you
-										be doing now?</strong
-									>
-								</p>
-								<p>
-									Beauty therapist for the rich and famous, have you seen the
-									price of treatments these days! I qualified as a beautician
-									when I first started working, albeit I never visit a salon.
-								</p>
-								<p class="pb-0">
-									<strong
-										>At the end of your career, if you were to sit and reflect,
-										what one hope do you have?</strong
-									>
-								</p>
-								<p>In the main, to have enjoyed my working life.</p>
-							</div>
-						</div>
-					</div>
-				</section>
-			</main>
-			<!-- Footer Partial -->
-			<footer class="footer bg-color-dark-shades">
-				<img class="logo footer__logo" src="/assets/logo.4586e66e.svg" alt="WEC Global" />
-				<div class="footer__navigation">
-					<ul class="footer__list">
-						<li class="footer__item">
-							<a
-								target="_blank"
-								href="/assets/docs/Privacy Statement.pdf"
-								class="footer__link"
-								>Privacy Statement
-							</a>
-						</li>
-						<li class="footer__item">
-							<a
-								target="_blank"
-								href="/assets/docs/Cookies Policy.pdf"
-								class="footer__link"
-								>Cookies Policy
-							</a>
-						</li>
-						<li class="footer__item">
-							<a
-								target="_blank"
-								href="/assets/docs/Code of Ethics.pdf"
-								class="footer__link"
-								>Code of Ethics
-							</a>
-						</li>
-						<li class="footer__item">
-							<a
-								target="_blank"
-								href="/assets/docs/Terms of Use.pdf"
-								class="footer__link"
-								>Terms of Use
-							</a>
-						</li>
-						<li class="footer__item">
-							<a
-								href="https://www.linkedin.com/company/woman-in-ethics-compliance-global/"
-								class="footer__link"
-								target="_blank"
-							>
-								<img
-									class="footer__link__social"
-									src="/assets/linkedin.a6501208.svg"
-									alt="Linkedin"
-								/>
-							</a>
-						</li>
-						<li class="footer__item">
-							<a
-								href="https://www.instagram.com/wec_global/"
-								class="footer__link"
-								target="_blank"
-							>
-								<img
-									class="footer__link__social"
-									src="/assets/instagram.c5f2d117.svg"
-									alt="Instagram"
-								/>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</footer>
-			<!-- End of Footer -->
-		</div>
-	</body>
 </html>

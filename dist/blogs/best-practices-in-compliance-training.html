@@ -1,515 +1,495 @@
 <!DOCTYPE html>
 <html lang="en">
-	<!-- prettier-ignore -->
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.ba1111b2.png" />
-		<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAABNZJREFUWEedV21sU1UYfk5vt3Z07gu2bNmgSUemwyErCHHCJoN1cwkMgquiCy7RH2pEY2KMARP/+tOEXxoTmEoUw4SBgYW5ZYhDfgzxM47APiLYhVmyrtvardDbY+69537f23aeP+09977P+77P+3UO8e96zks50kOAHQBxUgoQABTQ/BEeAEKEXcJemt+zt9LH4tLsCLJUQBbleFCMIMV3E//u4A8gaFK1auTZ9wqOgCHKM2DBFmawRkpnuGKC4pXWPHqZ+FuCSYByktRKltlfk+d2BjJ2KUWS1LcEZWJ0pGnh06myZM46CMagSNHwtwRpehAxG1jA7RlycAQVpWsQuhdOQ6PZFcmAFS0zSFVFKY68fQgbfOvwxgcf4+b43xkRZRQ1BBZJos1lmQOtekII9rc14pXOVoydvYTQL3+iN7qEUGxZTHixaLRLp0NCEhlQQdNGWxfZstUleP9wF9ZyBNe/PIul6DzCSR59c3Esp7InlfgDnVSpT23d6v4LuuUGQdC2cxve7OrARP8wJkdGIei7Hk9gNJ4Q/69kEX8gSKWuk3kVF+bj3ddfRG1JIUY/P43Y/QhmkzwG55cxk+QzA5icEqug06qVqInPjGvYUof3XnsBocvXcHvoKlKU4rd4AtdiCSR1DghwrFtqYi4HV/0Vio/lgJps0qY5cSjqytego6wIC/fCcBcVoOiZBhzrG8JMeDYLz7XprPRRqbiNjcgOrczJoekRNypyODg4DuubG1AdaETvwI/46swglhMP9G2aARk9N+JbhsCy9TBiHnXlYLvHBQ/ngLsgH3X7AvDUVOOTk+cwNHIDckJRVltCNEw5puzRDDlgQ0cOAZ5c5UL9qlw4CUGxtxL+5/di+mESRz/6FNGFWNZh+R+dUMUu5BzYWeTBOk7oOgTerZtwfGwKf03czdIAgQGlDAXyiJjApnZgA7ex1ocjhw/h/ngIUxcHkYzM4tvoEqYfPBQlxPhnKPE0DNh3xdwcJ149uAcdzzbh9t0I5mMJxBbj6PvmNMamZ0wlbG0/c1gZRrazgH3IUGp8VTj61svI8xRgMhQBn6K4eWsc5y5cwsKiGvtsm7qZAdEQcx1wnANdB1rx0v5WTE5HMDufwHIigf6BYfz86+9mJ+0cMuxbhsBqku1peRrdB/dh4p8IknwK/4bD+OLUGczNRRnlmjOfbI5BmRUrmauAgWzbsgkd7a1itrtzOdRVl6F/+Ccc//oCFhbjGgYs1BjZ0DynN8AgWLPeh/bWZpSuLgHHcfCWFyDfTXDi1EWc//4qeD5lTkBNZzcfYHVlaJWrZm8ExU9t3Yzmpu1wu3KR53LCV1WMaCSCYyd6ceOPW0oZ6xVap2VWJyL9KJGe8j0eBJobsbl+I4STUUlBHnyVRXjnQ+FIdkfnjU61kuQSNZIBaY5jmU69VRXlaG/bDe/aStGQz3pOYupOSBGzPewzndkdSNjHdrUtKH7i8VpseKwG3/UPYDEm9AMr1RanYtM4NrHBhNjVSg9h7BfZth/5Wicnody4TcPaZpTKs57pX+mdSqtGvJpRQJhn6gDJNMvS5YwiKzOnApv5obx6OTUKiimqXj4zHt2zMcpQAaC4Qvy7Dnipw9FDQHYAcEqK9AMoUyWsgDu5UfGgdISmUt3/ARQi6vZ9CgNGAAAAAElFTkSuQmCC" />
-		<link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAgxJREFUOE9Vk0trFFEQhb+bcWQG0aAYI0ExCEEQQdsXhkjGcZxN0I1kFN2p2eYfCK5cuxZXghoUYhBkFmJEA4OIClmpEAImUdGNjwmJo6G75Na9t7vtTXfX41TVqVMmqo1OYMx5EIM+9iX+nfvyXnW5RxC5b6JTjcRFC2JcskmDXJbC5QE0wFi7WADR2uJN+u0TjVAqrqdxpsrD5gyrvzseTFO1rInqDcm15ezWD+wd6OfS8CE+P3/JrY9fWYmT3IC2okE7SK1+jHWFAhdPV9m39odXrbc8Xe7wK5ccmNK3AniLTiZwpT7Iti/f+LAW82hugSQ4NFJn15r6d8ADOLML6CsWqGwsc3AoYnFTN3cev+BHexkkTGscgHLgSVSDBjhnl+WgXGR4azcDJwa5NjVNe2XVbU87dT1kHIR9BWQMZ0cqVI8d4c1Uk3uz7/grnt0gA1vMbcFpwNgAY+jt2cL45XOUNmzmybMW0zMt4jhOFZQXWtqBz7VYjI9dYEffLhaX5rl5e5I4SVLi/PoRccOmW8imh3K5RK1ynMrQUYp0uDvZ5PXs+4x7FZvbxX9rzMo45/beHkbqNQ7v38PV6zf4/rOdnYoPzq0xaD4Q5aRq43b372Rh6RNxnF2SXo+lLD0mNQgmXI22GDTnpeOTgpzs2Zno5OgEXfac3UXqNsNxWbAgO99Y7ijFCA/+ATMh5e3TtvhRAAAAAElFTkSuQmCC" />
-		<link rel="manifest" href="data:application/manifest+json;base64,ewoJIm5hbWUiOiAiV29tZW4gaW4gRXRoaWNzICYgQ29tcGxpYW5jZSBHbG9iYWwiLAoJInNob3J0X25hbWUiOiAiV0VDLUdsb2JhbCIsCgkiaWNvbnMiOiBbCgkJewoJCQkic3JjIjogIi4vYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLAoJCQkic2l6ZXMiOiAiMTkyeDE5MiIsCgkJCSJ0eXBlIjogImltYWdlL3BuZyIKCQl9LAoJCXsKCQkJInNyYyI6ICIuL2FuZHJvaWQtY2hyb21lLTUxMng1MTIucG5nIiwKCQkJInNpemVzIjogIjUxMng1MTIiLAoJCQkidHlwZSI6ICJpbWFnZS9wbmciCgkJfQoJXSwKCSJ0aGVtZV9jb2xvciI6ICIjZmZmZmZmIiwKCSJiYWNrZ3JvdW5kX2NvbG9yIjogIiNmZmZmZmYiLAoJImRpc3BsYXkiOiAic3RhbmRhbG9uZSIKfQo=" />
+<!-- prettier-ignore -->
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.ba1111b2.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAABNZJREFUWEedV21sU1UYfk5vt3Z07gu2bNmgSUemwyErCHHCJoN1cwkMgquiCy7RH2pEY2KMARP/+tOEXxoTmEoUw4SBgYW5ZYhDfgzxM47APiLYhVmyrtvardDbY+69537f23aeP+09977P+77P+3UO8e96zks50kOAHQBxUgoQABTQ/BEeAEKEXcJemt+zt9LH4tLsCLJUQBbleFCMIMV3E//u4A8gaFK1auTZ9wqOgCHKM2DBFmawRkpnuGKC4pXWPHqZ+FuCSYByktRKltlfk+d2BjJ2KUWS1LcEZWJ0pGnh06myZM46CMagSNHwtwRpehAxG1jA7RlycAQVpWsQuhdOQ6PZFcmAFS0zSFVFKY68fQgbfOvwxgcf4+b43xkRZRQ1BBZJos1lmQOtekII9rc14pXOVoydvYTQL3+iN7qEUGxZTHixaLRLp0NCEhlQQdNGWxfZstUleP9wF9ZyBNe/PIul6DzCSR59c3Esp7InlfgDnVSpT23d6v4LuuUGQdC2cxve7OrARP8wJkdGIei7Hk9gNJ4Q/69kEX8gSKWuk3kVF+bj3ddfRG1JIUY/P43Y/QhmkzwG55cxk+QzA5icEqug06qVqInPjGvYUof3XnsBocvXcHvoKlKU4rd4AtdiCSR1DghwrFtqYi4HV/0Vio/lgJps0qY5cSjqytego6wIC/fCcBcVoOiZBhzrG8JMeDYLz7XprPRRqbiNjcgOrczJoekRNypyODg4DuubG1AdaETvwI/46swglhMP9G2aARk9N+JbhsCy9TBiHnXlYLvHBQ/ngLsgH3X7AvDUVOOTk+cwNHIDckJRVltCNEw5puzRDDlgQ0cOAZ5c5UL9qlw4CUGxtxL+5/di+mESRz/6FNGFWNZh+R+dUMUu5BzYWeTBOk7oOgTerZtwfGwKf03czdIAgQGlDAXyiJjApnZgA7ex1ocjhw/h/ngIUxcHkYzM4tvoEqYfPBQlxPhnKPE0DNh3xdwcJ149uAcdzzbh9t0I5mMJxBbj6PvmNMamZ0wlbG0/c1gZRrazgH3IUGp8VTj61svI8xRgMhQBn6K4eWsc5y5cwsKiGvtsm7qZAdEQcx1wnANdB1rx0v5WTE5HMDufwHIigf6BYfz86+9mJ+0cMuxbhsBqku1peRrdB/dh4p8IknwK/4bD+OLUGczNRRnlmjOfbI5BmRUrmauAgWzbsgkd7a1itrtzOdRVl6F/+Ccc//oCFhbjGgYs1BjZ0DynN8AgWLPeh/bWZpSuLgHHcfCWFyDfTXDi1EWc//4qeD5lTkBNZzcfYHVlaJWrZm8ExU9t3Yzmpu1wu3KR53LCV1WMaCSCYyd6ceOPW0oZ6xVap2VWJyL9KJGe8j0eBJobsbl+I4STUUlBHnyVRXjnQ+FIdkfnjU61kuQSNZIBaY5jmU69VRXlaG/bDe/aStGQz3pOYupOSBGzPewzndkdSNjHdrUtKH7i8VpseKwG3/UPYDEm9AMr1RanYtM4NrHBhNjVSg9h7BfZth/5Wicnody4TcPaZpTKs57pX+mdSqtGvJpRQJhn6gDJNMvS5YwiKzOnApv5obx6OTUKiimqXj4zHt2zMcpQAaC4Qvy7Dnipw9FDQHYAcEqK9AMoUyWsgDu5UfGgdISmUt3/ARQi6vZ9CgNGAAAAAElFTkSuQmCC" />
+	<link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAgxJREFUOE9Vk0trFFEQhb+bcWQG0aAYI0ExCEEQQdsXhkjGcZxN0I1kFN2p2eYfCK5cuxZXghoUYhBkFmJEA4OIClmpEAImUdGNjwmJo6G75Na9t7vtTXfX41TVqVMmqo1OYMx5EIM+9iX+nfvyXnW5RxC5b6JTjcRFC2JcskmDXJbC5QE0wFi7WADR2uJN+u0TjVAqrqdxpsrD5gyrvzseTFO1rInqDcm15ezWD+wd6OfS8CE+P3/JrY9fWYmT3IC2okE7SK1+jHWFAhdPV9m39odXrbc8Xe7wK5ccmNK3AniLTiZwpT7Iti/f+LAW82hugSQ4NFJn15r6d8ADOLML6CsWqGwsc3AoYnFTN3cev+BHexkkTGscgHLgSVSDBjhnl+WgXGR4azcDJwa5NjVNe2XVbU87dT1kHIR9BWQMZ0cqVI8d4c1Uk3uz7/grnt0gA1vMbcFpwNgAY+jt2cL45XOUNmzmybMW0zMt4jhOFZQXWtqBz7VYjI9dYEffLhaX5rl5e5I4SVLi/PoRccOmW8imh3K5RK1ynMrQUYp0uDvZ5PXs+4x7FZvbxX9rzMo45/beHkbqNQ7v38PV6zf4/rOdnYoPzq0xaD4Q5aRq43b372Rh6RNxnF2SXo+lLD0mNQgmXI22GDTnpeOTgpzs2Zno5OgEXfac3UXqNsNxWbAgO99Y7ijFCA/+ATMh5e3TtvhRAAAAAElFTkSuQmCC" />
+	<link rel="manifest" href="data:application/manifest+json;base64,ewoJIm5hbWUiOiAiV29tZW4gaW4gRXRoaWNzICYgQ29tcGxpYW5jZSBHbG9iYWwiLAoJInNob3J0X25hbWUiOiAiV0VDLUdsb2JhbCIsCgkiaWNvbnMiOiBbCgkJewoJCQkic3JjIjogIi4vYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLAoJCQkic2l6ZXMiOiAiMTkyeDE5MiIsCgkJCSJ0eXBlIjogImltYWdlL3BuZyIKCQl9LAoJCXsKCQkJInNyYyI6ICIuL2FuZHJvaWQtY2hyb21lLTUxMng1MTIucG5nIiwKCQkJInNpemVzIjogIjUxMng1MTIiLAoJCQkidHlwZSI6ICJpbWFnZS9wbmciCgkJfQoJXSwKCSJ0aGVtZV9jb2xvciI6ICIjZmZmZmZmIiwKCSJiYWNrZ3JvdW5kX2NvbG9yIjogIiNmZmZmZmYiLAoJImRpc3BsYXkiOiAic3RhbmRhbG9uZSIKfQo=" />
+
+	<!--  Essential META Tags -->
+	<meta property="title" content="Best Practices in Compliance Training" />
+	<meta
+		property="og:description"
+		content="A unique and exciting space for brilliant and smart-minded women in ethics and compliance to connect, learn and collaborate"
+	/>
+	<!-- Meta Image -->
+	<meta property="og:image" content="https://wec-global.org/assets/best-practices-in-compliance-training.bd82cc3a.png" />
+	<!-- Meta URL -->
+	<meta property="og:url" content="https://wec-global.org/blogs/best-practices-in-compliance-training.html" />
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script
+		async
+		src="https://www.googletagmanager.com/gtag/js?id=UA-201399005-1"
+	></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
 	
-		<!--  Essential META Tags -->
-		<meta property="title" content="Best Practices in Compliance Training" />
-		<meta
-			property="og:description"
-			content="A unique and exciting space for brilliant and smart-minded women in ethics and compliance to connect, learn and collaborate"
-		/>
-		<!-- Meta Image -->
-		<meta property="og:image" content="https://wec-global.org/assets/best-practices-in-compliance-training.bd82cc3a.png" />
-		<!-- Meta URL -->
-		<meta property="og:url" content="https://wec-global.org/blogs/best-practices-in-compliance-training.html" />
+		gtag('config', 'UA-201399005-1');
+	</script>
+	<!-- /Global site tag (gtag.js) - Google Analytics -->
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+		rel="stylesheet"
+	/>
+	<!-- CSS -->
 	
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script
-			async
-			src="https://www.googletagmanager.com/gtag/js?id=UA-201399005-1"
-		></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag('js', new Date());
-		
-			gtag('config', 'UA-201399005-1');
-		</script>
-		<!-- /Global site tag (gtag.js) - Google Analytics -->
-	
-		<!-- Font -->
-		<link rel="preconnect" href="https://fonts.gstatic.com" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
-			rel="stylesheet"
-		/>
-		<!-- CSS -->
-		
-		<!-- <link rel="stylesheet" href="/scss/style.scss" /> -->
-	
-		<!-- Cookie Consent by https://www.FreePrivacyPolicy.com -->
-		<script
-			type="text/javascript"
-			src="//www.freeprivacypolicy.com/public/cookie-consent/3.1.0/cookie-consent.js"
-		></script>
-		<script type="text/javascript">
-			document.addEventListener('DOMContentLoaded', function () {
-				cookieconsent.run({
-					notice_banner_type: 'headline',
-					consent_type: 'express',
-					palette: 'light',
-					language: 'en',
-					website_name: 'WEC Global',
-					cookies_policy_url:
-						'https://wec-global.org/assets/docs/Cookies%20Policy.pdf',
-				});
+	<!-- <link rel="stylesheet" href="/scss/style.scss" /> -->
+
+	<!-- Cookie Consent by https://www.FreePrivacyPolicy.com -->
+	<script
+		type="text/javascript"
+		src="//www.freeprivacypolicy.com/public/cookie-consent/3.1.0/cookie-consent.js"
+	></script>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function () {
+			cookieconsent.run({
+				notice_banner_type: 'headline',
+				consent_type: 'express',
+				palette: 'light',
+				language: 'en',
+				website_name: 'WEC Global',
+				cookies_policy_url:
+					'https://wec-global.org/assets/docs/Cookies%20Policy.pdf',
 			});
-		</script>
+		});
+	</script>
+	
+	<noscript
+		>Cookie Consent by
+		<a
+			href="https://www.FreePrivacyPolicy.com/free-cookie-consent/"
+			rel="nofollow noopener"
+			>FreePrivacyPolicy.com</a
+		></noscript
+	>
+	<!-- End Cookie Consent -->
+	
+	<title>WEC Global | Best Practices in Compliance Training</title>
+  <script type="module" crossorigin src="/assets/script.53853695.js"></script>
+  <link rel="stylesheet" href="/assets/script.bd94349a.css">
+</head>
+
+<body>
+	<div class="container">
+		<!-- Header -->
+		<header class="header">
+			<a href="/index.html" class="header__logo-link">
+				<img
+					class="header__logo"
+					src="/assets/logo_dark_horizontal.3da46b72.svg"
+					alt="WEC Global"
+				/>
+			</a>
 		
-		<noscript
-			>Cookie Consent by
-			<a
-				href="https://www.FreePrivacyPolicy.com/free-cookie-consent/"
-				rel="nofollow noopener"
-				>FreePrivacyPolicy.com</a
-			></noscript
-		>
-		<!-- End Cookie Consent -->
+			<input type="checkbox" id="hamburger-check" />
+			<div class="hamburger-btn">
+				<label for="hamburger-check">
+					<span></span>
+					<span></span>
+					<span></span>
+				</label>
+			</div>
 		
-		<title>WEC Global | Best Practices in Compliance Training</title>
-		<script type="module" crossorigin src="/assets/script.2945bc78.js"></script>
-		<link rel="stylesheet" href="/assets/script.a0e069a9.css">
-	</head>
-
-	<body>
-		<div class="container">
-			<!-- Header -->
-			<header class="header">
-				<a href="/index.html" class="header__logo-link">
-					<img
-						class="header__logo"
-						src="/assets/logo_dark_horizontal.3da46b72.svg"
-						alt="WEC Global"
-					/>
-				</a>
-			
-				<input type="checkbox" id="hamburger-check" />
-				<div class="hamburger-btn">
-					<label for="hamburger-check">
-						<span></span>
-						<span></span>
-						<span></span>
-					</label>
-				</div>
-			
-				<nav class="header__nav">
-					<ul class="header__list">
-						<li class="header__item">
-							<a href="/about.html" class="header__link ">About</a>
-						</li>
-						<li class="header__item">
-							<a href="#" class="header__link ">Join</a>
-							<ul class="header__sublist">
-								<li class="header__item">
-									<a href="/membership.html" class="header__link "
-										>Membership</a
-									>
-								</li>
-								<li class="header__item">
-									<a href="/friend.html" class="header__link ">Friend</a>
-								</li>
-							</ul>
-						</li>
-						<li class="header__item">
-							<a href="/initiatives.html" class="header__link "
-								>Initiatives</a
-							>
-						</li>
-						<li class="header__item">
-							<a href="/team.html" class="header__link ">Team</a>
-						</li>
-						<li class="header__item">
-							<a href="/media.html" class="header__link header__link--active">Media</a>
-						</li>
-						<li class="header__item">
-							<a href="/contact.html" class="header__link ">Contact</a>
-						</li>
-					</ul>
-				</nav>
-			</header>
-			<!-- End of Header -->
-
-			<!-- Hero Banner -->
-			<!-- prettier-ignore -->
-			<section class="hero">
-				<div class="hero__title hero__blog">
-					<h1 class="hero__title-h1">Read our Latest Blogs</h1>
-					<h3 class="hero__title-h3">A journal on ethics, compliance, life, and more</h3>
-					<button class="btn btn-primary btn-center">
-						<a href="#" class="btn__link">Join us now</a>
-					</button>
-				</div>
-				<div class="hero__image">
-					<img
-						class="hero__image__main"
-						src="/assets/blog.332be87e.svg"
-						alt="Women in Ethics &amp; Compliance Global"
-					/>
-				</div>
-			</section>
-			<!-- End of Hero Banner -->
-
-			<main class="main pb-8 pt-4">
-				<div class="content-section__center">
-					<div class="blog">
-						<div class="blog__header">
-							<div class="blog__info">
-								<div class="blog__date">September 01, 2021</div>
-								<div class="blog__author">Ekomobong E. Ekpro</div>
-							</div>
-							<h2 class="heading-2 blog__title">
-								Best Practices in Compliance Training
-							</h2>
-							<div class="blog__tags">
-								<div class="blog__tag">Program Awareness</div>
-								<div class="blog__tag">Compliance Programs</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<section class="blog-section-flex">
-					<!-- Author -->
-					<div class="blog-section__author">
-						<a
-							target="_blank"
-							href="https://www.linkedin.com/in/ekomobongekpro/"
+			<nav class="header__nav">
+				<ul class="header__list">
+					<li class="header__item">
+						<a href="/about.html" class="header__link ">About</a>
+					</li>
+					<li class="header__item">
+						<a href="#" class="header__link ">Join</a>
+						<ul class="header__sublist">
+							<li class="header__item">
+								<a href="/membership.html" class="header__link "
+									>Membership</a
+								>
+							</li>
+							<li class="header__item">
+								<a href="/friend.html" class="header__link ">Friend</a>
+							</li>
+						</ul>
+					</li>
+					<li class="header__item">
+						<a href="/initiatives.html" class="header__link "
+							>Initiatives</a
 						>
-							<img
-								src="/assets/Ekomobong Ekpro.91fa6000.jpg"
-								alt="Ekomobong E. Ekpro"
-								class="blog-section__author__photo"
-							/>
-						</a>
-						<div class="blog-section__author__prophile">
-							<p>
-								Ekomobong E. Ekpro is a lawyer currently working in-house in a
-								multinational energy trading company. She is passionate about
-								writing on compliance issues particularly on compliance culture,
-								anti-bribery, and training.
-							</p>
-							<p>
-								She received her LLB and LLM from the University of Sussex,
-								Brighton, UK. She is called to the Nigerian Bar Association and
-								is an Associate Member of the Institute of Chartered Secretaries
-								and Administrators of Nigeria.
-							</p>
-							<p>
-								Ekomobong started her legal career in a boutique law firm that
-								specialises in criminal and civil litigation and transitioned
-								in-house where she currently works in the legal department of a
-								multinational energy trading company to ensure the legal
-								function is effective in meeting the corporate needs of the
-								organisation. She currently supports the compliance function in
-								its operationalization of the anti-corruption program and enjoys
-								the creative aspects to it.
-							</p>
-							<p>
-								Currently, Ekomobong devotes her time to learning about
-								anti-bribery compliance, networking with compliance
-								professionals, and writing on compliance issues of interest.
-							</p>
-							<p>
-								You can find Ekomobong on
-								<a
-									target="_blank"
-									href="https://www.linkedin.com/in/ekomobongekpro/"
-									class="external-link"
-									>LinkedIn</a
-								>.
-							</p>
+					</li>
+					<li class="header__item">
+						<a href="/team.html" class="header__link ">Team</a>
+					</li>
+					<li class="header__item">
+						<a href="/media.html" class="header__link header__link--active">Media</a>
+					</li>
+					<li class="header__item">
+						<a href="/contact.html" class="header__link ">Contact</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<!-- End of Header -->
+
+		<!-- Hero Banner -->
+		<!-- prettier-ignore -->
+		<section class="hero">
+			<div class="hero__title hero__blog">
+				<h1 class="hero__title-h1">Read our Latest Blogs</h1>
+				<h3 class="hero__title-h3">A journal on ethics, compliance, life, and more</h3>
+				<button class="btn btn-primary btn-center">
+					<a href="#" class="btn__link">Join us now</a>
+				</button>
+			</div>
+			<div class="hero__image">
+				<img
+					class="hero__image__main"
+					src="/assets/blog.332be87e.svg"
+					alt="Women in Ethics &amp; Compliance Global"
+				/>
+			</div>
+		</section>
+		<!-- End of Hero Banner -->
+
+		<main class="main pb-8 pt-4">
+			<div class="content-section__center">
+				<div class="blog">
+					<div class="blog__header">
+						<div class="blog__info">
+							<div class="blog__date">September 01, 2021</div>
+							<div class="blog__author">Ekomobong E. Ekpro</div>
+						</div>
+						<h2 class="heading-2 blog__title">
+							Best Practices in Compliance Training
+						</h2>
+						<div class="blog__tags">
+							<div class="blog__tag">Program Awareness</div>
+							<div class="blog__tag">Compliance Programs</div>
 						</div>
 					</div>
-					<!-- /Author -->
+				</div>
+			</div>
 
-					<div class="blog">
-						<div class="blog__content">
-							<div class="content-section__copy">
-								<img
-									src="/assets/best-practices-in-compliance-training.bd82cc3a.png"
-									alt="Best Practices in Compliance Training"
-									class="blogpost__image pb-2"
-								/>
-								<p>
-									Training and communication are ethics and compliance
-									components that I think about often. I think about what makes
-									training engaging, and how to communicate my training program
-									in a way that is persuasive and can influence behaviour.
-									Subject matter experts agree that training is one of the
-									cornerstones of any ethics and compliance program’s objective
-									to promote an ethical culture, communicate leadership’s
-									message on the company’s commitments to ethical values, laws,
-									standards, policies and procedures, and mitigate risk.
-								</p>
-								<p>
-									I believe the importance of training in any ethics and
-									compliance program cannot be overstated, chiefly because
-									regulators demand that training and communications form an
-									integral part of any ethics and compliance program. In
-									addition, training creates the added value of keeping ethics
-									and compliance issues top of mind in employees. This is
-									especially true if communication is done well and in an
-									ongoing fashion that reinforces the ethical and compliance
-									messaging a company’s governing authority seeks to convey.
-									This will, in turn, mitigate risk and keep the company away
-									from reputational and legal trouble.
-								</p>
-								<p>
-									Further, because regulators understand that an effective
-									training program is an essential component of any ethics and
-									compliance program, they have laid out guidance in several
-									guidance documents that describe training practices companies
-									can adopt. In my opinion, the France Agence Francaise
-									Anticorruption (Hereafter AFA) guidance document does a
-									wonderful job of outlining practical ethics and compliance
-									training best practices and is rooted in learning theories
-									that, if adopted, can facilitate training effectiveness. I
-									will highlight the training guidance notes from the U.S.
-									Department of Justice and France AFA.
-								</p>
-								<p>
-									The US DOJ, in evaluating the adequacy and effectiveness of
-									any company’s ethics and compliance program, lays out in its
-									Evaluation of Corporate Compliance Programs guidance document
-									various topics prosecutors will consider in deciding the
-									effectiveness of any program. One of them is ‘Training and
-									Communication’. The DOJ gives some pointers as to compliance
-									best practices – in stating that 'a hallmark of a
-									well-designed compliance program is appropriately tailored
-									training and communications'.
-								</p>
-								<p>
-									In assessing a company’s compliance program, the DOJ will
-									consider the steps taken by the company to embed its policies
-									and procedures into its operations. In particular, the DOJ
-									will consider the following:
-								</p>
-								<ul
-									style="
+			<section class="blog-section-flex">
+				<!-- Author -->
+				<div class="blog-section__author">
+					<a target="_blank" href="https://www.linkedin.com/in/ekomobongekpro/">
+						<img src="/assets/Ekomobong Ekpro.91fa6000.jpg" alt="Ekomobong E. Ekpro"
+							class="blog-section__author__photo" />
+					</a>
+					<div class="blog-section__author__prophile">
+						<p>
+							Ekomobong E. Ekpro is a lawyer currently working in-house in a
+							multinational energy trading company. She is passionate about
+							writing on compliance issues particularly on compliance culture,
+							anti-bribery, and training.
+						</p>
+						<p>
+							She received her LLB and LLM from the University of Sussex,
+							Brighton, UK. She is called to the Nigerian Bar Association and
+							is an Associate Member of the Institute of Chartered Secretaries
+							and Administrators of Nigeria.
+						</p>
+						<p>
+							Ekomobong started her legal career in a boutique law firm that
+							specialises in criminal and civil litigation and transitioned
+							in-house where she currently works in the legal department of a
+							multinational energy trading company to ensure the legal
+							function is effective in meeting the corporate needs of the
+							organisation. She currently supports the compliance function in
+							its operationalization of the anti-corruption program and enjoys
+							the creative aspects to it.
+						</p>
+						<p>
+							Currently, Ekomobong devotes her time to learning about
+							anti-bribery compliance, networking with compliance
+							professionals, and writing on compliance issues of interest.
+						</p>
+						<p>
+							You can find Ekomobong on
+							<a target="_blank" href="https://www.linkedin.com/in/ekomobongekpro/"
+								class="external-link">LinkedIn</a>.
+						</p>
+					</div>
+				</div>
+				<!-- /Author -->
+
+				<div class="blog">
+					<div class="blog__content">
+						<div class="content-section__copy">
+							<img src="/assets/best-practices-in-compliance-training.bd82cc3a.png"
+								alt="Best Practices in Compliance Training" class="blogpost__article-image pb-2" />
+							<p>
+								Training and communication are ethics and compliance
+								components that I think about often. I think about what makes
+								training engaging, and how to communicate my training program
+								in a way that is persuasive and can influence behaviour.
+								Subject matter experts agree that training is one of the
+								cornerstones of any ethics and compliance program’s objective
+								to promote an ethical culture, communicate leadership’s
+								message on the company’s commitments to ethical values, laws,
+								standards, policies and procedures, and mitigate risk.
+							</p>
+							<p>
+								I believe the importance of training in any ethics and
+								compliance program cannot be overstated, chiefly because
+								regulators demand that training and communications form an
+								integral part of any ethics and compliance program. In
+								addition, training creates the added value of keeping ethics
+								and compliance issues top of mind in employees. This is
+								especially true if communication is done well and in an
+								ongoing fashion that reinforces the ethical and compliance
+								messaging a company’s governing authority seeks to convey.
+								This will, in turn, mitigate risk and keep the company away
+								from reputational and legal trouble.
+							</p>
+							<p>
+								Further, because regulators understand that an effective
+								training program is an essential component of any ethics and
+								compliance program, they have laid out guidance in several
+								guidance documents that describe training practices companies
+								can adopt. In my opinion, the France Agence Francaise
+								Anticorruption (Hereafter AFA) guidance document does a
+								wonderful job of outlining practical ethics and compliance
+								training best practices and is rooted in learning theories
+								that, if adopted, can facilitate training effectiveness. I
+								will highlight the training guidance notes from the U.S.
+								Department of Justice and France AFA.
+							</p>
+							<p>
+								The US DOJ, in evaluating the adequacy and effectiveness of
+								any company’s ethics and compliance program, lays out in its
+								Evaluation of Corporate Compliance Programs guidance document
+								various topics prosecutors will consider in deciding the
+								effectiveness of any program. One of them is ‘Training and
+								Communication’. The DOJ gives some pointers as to compliance
+								best practices – in stating that 'a hallmark of a
+								well-designed compliance program is appropriately tailored
+								training and communications'.
+							</p>
+							<p>
+								In assessing a company’s compliance program, the DOJ will
+								consider the steps taken by the company to embed its policies
+								and procedures into its operations. In particular, the DOJ
+								will consider the following:
+							</p>
+							<ul style="
 										list-style-position: inside;
 										padding-bottom: 1.4rem;
 										text-align: left;
-									"
-								>
-									<li>
-										The frequency of training including certifications for all
-										directors, officers, relevant employees, and where
-										appropriate, agents and business partners.
-									</li>
-									<li>
-										Whether the company communicates training in a risk-based
-										approach including the extent to which a company has
-										measured the impact of training on employee behavior or
-										operations.
-									</li>
-								</ul>
-								<p>
-									The DOJ also requires that the company explain its rationale
-									for its choice of form and content of the training program.
-									They also expect to see prior compliance incidents form part
-									of the training program and whether employees are tested on
-									their knowledge.
-								</p>
-								<p>
-									The AFA’s guidance joins others to advocate for a risk-based
-									approach to training programs, in other words, training for
-									those employees with the greatest exposure to ethics and
-									compliance risks. The purpose of this is to promote vigilance,
-									inform high-risk employees of the due diligence obligations
-									required for their role, the behavior to adopt in high-risk
-									scenarios, and to assume ownership of the company’s compliance
-									program.
-								</p>
-								<p>
-									What I find interesting about the AFA’s guidance, is that it
-									recommends best practices in compliance and ethics training
-									and is rooted in a potpourri of adult learning theories that
-									include self-directed, experiential and transformational
-									learning.
-								</p>
-								<p>
-									The AFA advocates training as a tool that can drive compliant
-									behavior, overseen by senior management. It emphasizes the
-									importance of using interactive training techniques rooted in
-									self-directed, experiential, and transformational learning
-									theories in recommending, communication toolkits and
-									customized group meetings where employees are trained using
-									case studies and complex ethics and compliance scenarios that
-									can drive discussions about their experiences, responses, and
-									conclusions. This gives a hands-on approach to training.
-								</p>
-								<p>
-									However, training appears to be a challenging aspect in ethics
-									and compliance programs. A 2016 survey conducted by Compliance
-									Week and Deloitte found that 41% of compliance professionals
-									find developing a training program that addresses risks a
-									challenging aspect. So, compliance professionals are often
-									concerned with the best way to develop a training program that
-									meets the ethics and compliance objective that will engender
-									participation and ownership, including the extent to which the
-									training program will influence behavior.
-								</p>
-								<p>
-									To overcome these challenges, I join other commentators in
-									suggesting that compliance professionals can reimagine their
-									training programs using insights developed from adult learning
-									theories. Ethics and compliance professionals can find
-									adopting a hands-on approach to their training programs
-									useful. The goal of any training according to the
-									transformational learning theory is to drive engagement and
-									use complex and disorienting ethics and compliance scenarios
-									to challenge trainee’s beliefs, the purpose is to get the
-									trainees to think about how these scenarios could translate
-									into their daily work in hopes to transform their thinking.
-									Perfect for high-risk group training.
-								</p>
-								<p>
-									Experiential training takes a similar approach and emphasizes
-									reflection, it puts trainees in the driver’s seat and asks
-									them to reflect on ethics and compliance scenarios and test
-									their judgment levels. Innovative compliance training methods
-									like e-learning, games, and other interactive formats are
-									perfect tools.
-								</p>
-								<p>
-									Self-directed training is rooted in providing trainees with
-									toolkits and counseling that helps them make the right
-									decisions. This theory attempts to explain that adults are
-									self-motivated learners. For example, the availability of
-									ethics and compliance toolkits in the form of infographics
-									help employees understand how to deal with customs that
-									approach them for kickbacks at the airport, with guidance
-									documents that explain to your public affairs team how to
-									interact with government officials, etc.
-								</p>
-								<p>
-									Ultimately, compliance professionals must figure out the best
-									way to make their training programs engaging, applicable,
-									relevant, and engender employee participation and ownership.
-									This should be based on a careful strategy that recognizes the
-									company’s risk profile and unique culture, customizes content
-									to employee roles and risk levels, utilizes effective adult
-									learning techniques and fresh content, and strives for
-									continuous improvement. Seeking out industry best practices in
-									all these areas is a great place to get started if you’re
-									looking for innovative ways to advance your program.
-								</p>
+									">
+								<li>
+									The frequency of training including certifications for all
+									directors, officers, relevant employees, and where
+									appropriate, agents and business partners.
+								</li>
+								<li>
+									Whether the company communicates training in a risk-based
+									approach including the extent to which a company has
+									measured the impact of training on employee behavior or
+									operations.
+								</li>
+							</ul>
+							<p>
+								The DOJ also requires that the company explain its rationale
+								for its choice of form and content of the training program.
+								They also expect to see prior compliance incidents form part
+								of the training program and whether employees are tested on
+								their knowledge.
+							</p>
+							<p>
+								The AFA’s guidance joins others to advocate for a risk-based
+								approach to training programs, in other words, training for
+								those employees with the greatest exposure to ethics and
+								compliance risks. The purpose of this is to promote vigilance,
+								inform high-risk employees of the due diligence obligations
+								required for their role, the behavior to adopt in high-risk
+								scenarios, and to assume ownership of the company’s compliance
+								program.
+							</p>
+							<p>
+								What I find interesting about the AFA’s guidance, is that it
+								recommends best practices in compliance and ethics training
+								and is rooted in a potpourri of adult learning theories that
+								include self-directed, experiential and transformational
+								learning.
+							</p>
+							<p>
+								The AFA advocates training as a tool that can drive compliant
+								behavior, overseen by senior management. It emphasizes the
+								importance of using interactive training techniques rooted in
+								self-directed, experiential, and transformational learning
+								theories in recommending, communication toolkits and
+								customized group meetings where employees are trained using
+								case studies and complex ethics and compliance scenarios that
+								can drive discussions about their experiences, responses, and
+								conclusions. This gives a hands-on approach to training.
+							</p>
+							<p>
+								However, training appears to be a challenging aspect in ethics
+								and compliance programs. A 2016 survey conducted by Compliance
+								Week and Deloitte found that 41% of compliance professionals
+								find developing a training program that addresses risks a
+								challenging aspect. So, compliance professionals are often
+								concerned with the best way to develop a training program that
+								meets the ethics and compliance objective that will engender
+								participation and ownership, including the extent to which the
+								training program will influence behavior.
+							</p>
+							<p>
+								To overcome these challenges, I join other commentators in
+								suggesting that compliance professionals can reimagine their
+								training programs using insights developed from adult learning
+								theories. Ethics and compliance professionals can find
+								adopting a hands-on approach to their training programs
+								useful. The goal of any training according to the
+								transformational learning theory is to drive engagement and
+								use complex and disorienting ethics and compliance scenarios
+								to challenge trainee’s beliefs, the purpose is to get the
+								trainees to think about how these scenarios could translate
+								into their daily work in hopes to transform their thinking.
+								Perfect for high-risk group training.
+							</p>
+							<p>
+								Experiential training takes a similar approach and emphasizes
+								reflection, it puts trainees in the driver’s seat and asks
+								them to reflect on ethics and compliance scenarios and test
+								their judgment levels. Innovative compliance training methods
+								like e-learning, games, and other interactive formats are
+								perfect tools.
+							</p>
+							<p>
+								Self-directed training is rooted in providing trainees with
+								toolkits and counseling that helps them make the right
+								decisions. This theory attempts to explain that adults are
+								self-motivated learners. For example, the availability of
+								ethics and compliance toolkits in the form of infographics
+								help employees understand how to deal with customs that
+								approach them for kickbacks at the airport, with guidance
+								documents that explain to your public affairs team how to
+								interact with government officials, etc.
+							</p>
+							<p>
+								Ultimately, compliance professionals must figure out the best
+								way to make their training programs engaging, applicable,
+								relevant, and engender employee participation and ownership.
+								This should be based on a careful strategy that recognizes the
+								company’s risk profile and unique culture, customizes content
+								to employee roles and risk levels, utilizes effective adult
+								learning techniques and fresh content, and strives for
+								continuous improvement. Seeking out industry best practices in
+								all these areas is a great place to get started if you’re
+								looking for innovative ways to advance your program.
+							</p>
 
-								<p class="pb-0">
-									<strong
-										>What is one piece of advice you would give to your younger
-										self?</strong
-									>
-								</p>
-								<p>
-									If I could meet my 20-year-old self, I would tell her to
-									believe in her dreams and goals and to be fearless.
-								</p>
-								<p class="pb-0">
-									<strong
-										>If you had to choose an alternative career, what would you
-										be doing now?</strong
-									>
-								</p>
-								<p>
-									I wish I could be a professional academic, someone that spends
-									her time learning, researching, and getting paid for it.
-								</p>
-								<p class="pb-0">
-									<strong
-										>At the end of your career, if you were to sit and reflect,
-										what one hope do you have?</strong
-									>
-								</p>
-								<p>
-									I hope that I fearlessly pursued my career goals and that I
-									had a positive impact in the lives of those around me
-									(colleagues, mentees, peers) and not just particularly in the
-									ethics and compliance space but generally. I want to be a safe
-									space for others during my career.
-								</p>
-							</div>
+							<p class="pb-0">
+								<strong>What is one piece of advice you would give to your younger
+									self?</strong>
+							</p>
+							<p>
+								If I could meet my 20-year-old self, I would tell her to
+								believe in her dreams and goals and to be fearless.
+							</p>
+							<p class="pb-0">
+								<strong>If you had to choose an alternative career, what would you
+									be doing now?</strong>
+							</p>
+							<p>
+								I wish I could be a professional academic, someone that spends
+								her time learning, researching, and getting paid for it.
+							</p>
+							<p class="pb-0">
+								<strong>At the end of your career, if you were to sit and reflect,
+									what one hope do you have?</strong>
+							</p>
+							<p>
+								I hope that I fearlessly pursued my career goals and that I
+								had a positive impact in the lives of those around me
+								(colleagues, mentees, peers) and not just particularly in the
+								ethics and compliance space but generally. I want to be a safe
+								space for others during my career.
+							</p>
 						</div>
 					</div>
-				</section>
-			</main>
-			<!-- Footer Partial -->
-			<footer class="footer bg-color-dark-shades">
-				<img class="logo footer__logo" src="/assets/logo.4586e66e.svg" alt="WEC Global" />
-				<div class="footer__navigation">
-					<ul class="footer__list">
-						<li class="footer__item">
-							<a
-								target="_blank"
-								href="/assets/docs/Privacy Statement.pdf"
-								class="footer__link"
-								>Privacy Statement
-							</a>
-						</li>
-						<li class="footer__item">
-							<a
-								target="_blank"
-								href="/assets/docs/Cookies Policy.pdf"
-								class="footer__link"
-								>Cookies Policy
-							</a>
-						</li>
-						<li class="footer__item">
-							<a
-								target="_blank"
-								href="/assets/docs/Code of Ethics.pdf"
-								class="footer__link"
-								>Code of Ethics
-							</a>
-						</li>
-						<li class="footer__item">
-							<a
-								target="_blank"
-								href="/assets/docs/Terms of Use.pdf"
-								class="footer__link"
-								>Terms of Use
-							</a>
-						</li>
-						<li class="footer__item">
-							<a
-								href="https://www.linkedin.com/company/woman-in-ethics-compliance-global/"
-								class="footer__link"
-								target="_blank"
-							>
-								<img
-									class="footer__link__social"
-									src="/assets/linkedin.a6501208.svg"
-									alt="Linkedin"
-								/>
-							</a>
-						</li>
-						<li class="footer__item">
-							<a
-								href="https://www.instagram.com/wec_global/"
-								class="footer__link"
-								target="_blank"
-							>
-								<img
-									class="footer__link__social"
-									src="/assets/instagram.c5f2d117.svg"
-									alt="Instagram"
-								/>
-							</a>
-						</li>
-					</ul>
 				</div>
-			</footer>
-			<!-- End of Footer -->
-		</div>
-	</body>
+			</section>
+		</main>
+		<!-- Footer Partial -->
+		<footer class="footer bg-color-dark-shades">
+			<img class="logo footer__logo" src="/assets/logo.4586e66e.svg" alt="WEC Global" />
+			<div class="footer__navigation">
+				<ul class="footer__list">
+					<li class="footer__item">
+						<a
+							target="_blank"
+							href="/assets/docs/Privacy Statement.pdf"
+							class="footer__link"
+							>Privacy Statement
+						</a>
+					</li>
+					<li class="footer__item">
+						<a
+							target="_blank"
+							href="/assets/docs/Cookies Policy.pdf"
+							class="footer__link"
+							>Cookies Policy
+						</a>
+					</li>
+					<li class="footer__item">
+						<a
+							target="_blank"
+							href="/assets/docs/Code of Ethics.pdf"
+							class="footer__link"
+							>Code of Ethics
+						</a>
+					</li>
+					<li class="footer__item">
+						<a
+							target="_blank"
+							href="/assets/docs/Terms of Use.pdf"
+							class="footer__link"
+							>Terms of Use
+						</a>
+					</li>
+					<li class="footer__item">
+						<a
+							href="https://www.linkedin.com/company/woman-in-ethics-compliance-global/"
+							class="footer__link"
+							target="_blank"
+						>
+							<img
+								class="footer__link__social"
+								src="/assets/linkedin.a6501208.svg"
+								alt="Linkedin"
+							/>
+						</a>
+					</li>
+					<li class="footer__item">
+						<a
+							href="https://www.instagram.com/wec_global/"
+							class="footer__link"
+							target="_blank"
+						>
+							<img
+								class="footer__link__social"
+								src="/assets/instagram.c5f2d117.svg"
+								alt="Instagram"
+							/>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+		<!-- End of Footer -->
+	</div>
+</body>
+
 </html>
