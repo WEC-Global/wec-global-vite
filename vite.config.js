@@ -14,12 +14,14 @@ const inputFolders = rootFolders.concat(
 export default defineConfig({
 	root: path.resolve(__dirname),
 	base: '/', // Using a custom domain, so base should be root
+	publicDir: 'src/assets', // Set public directory to src/assets
 	build: {
 		outDir: path.join(__dirname, 'dist'),
 		emptyOutDir: true,
 		rollupOptions: {
 			input: inputFolders,
 		},
+		assetsDir: 'assets', // Ensure assets are output to /assets directory
 	},
 	plugins: [
 		handlebars({
