@@ -1,15 +1,19 @@
 import path from 'path';
 import glob from 'glob';
 import handlebars from 'vite-plugin-handlebars';
+import { defineConfig } from 'vite';
 
 // Add the root folder and the blogs folder to rollupOptions.input
-rootFolders = glob.sync(path.resolve(__dirname, 'src', '*.html'));
+rootFolders = [path.resolve(__dirname, 'index.html')].concat(
+	glob.sync(path.resolve(__dirname, 'src', '*.html'))
+);
 inputFolders = rootFolders.concat(
 	glob.sync(path.resolve(__dirname, 'src/blogs', '*.html'))
 );
 
-export default {
-	root: path.resolve(__dirname, 'src'),
+export default defineConfig({
+	root: path.resolve(__dirname),
+	base: '/',
 	// assetsInclude: 'pdf',
 	build: {
 		outDir: path.join(__dirname, 'dist'),
@@ -23,4 +27,4 @@ export default {
 			partialDirectory: path.resolve(__dirname, 'src', 'partials'),
 		}),
 	],
-};
+});
