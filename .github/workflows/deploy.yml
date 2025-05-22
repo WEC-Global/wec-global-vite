@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Make sure this matches your default branch
+      - main
 
 jobs:
   build-and-deploy:
@@ -26,6 +26,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages       # Branch to deploy to
-          folder: dist           # Folder to deploy (your Vite output)
-          clean: true            # (Optional) Removes old files before deploy
+          branch: gh-pages
+          folder: dist
+          clean: true
+          token: ${{ secrets.GITHUB_TOKEN }}
