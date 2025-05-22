@@ -4,13 +4,14 @@
 	"homepage": "https://ericg.github.io/wec-global-vite",
 	"scripts": {
 		"dev": "vite",
-		"build": "vite build",
-		"serve": "vite preview",
+		"build": "vite build && node build.js",
+		"preview": "vite preview",
 		"predeploy": "npm run build",
 		"deploy": "gh-pages -d dist"
 	},
 	"devDependencies": {
 		"autoprefixer": "^10.4.13",
+		"fs-extra": "^11.3.0",
 		"gh-pages": "^6.1.1",
 		"postcss": "^8.4.21",
 		"sass": "^1.58.3",
