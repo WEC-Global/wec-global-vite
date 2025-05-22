@@ -13,7 +13,7 @@ const htmlPages = [
 export default defineConfig({
   root: path.resolve(__dirname),
   base: '/', // Root-relative for custom domain
-  publicDir: 'src/assets', // Set to src/assets to include all static assets
+  publicDir: 'public', // Set to public directory
   build: {
     outDir: path.resolve(__dirname, 'dist'),
     emptyOutDir: true,

@@ -38,18 +38,8 @@ async function copyFiles() {
   for (const file of staticFiles) {
     if (fs.existsSync(file)) {
       await fs.copy(file, path.join('dist', path.basename(file)));
+      console.log(`Copied ${file} to dist/`);
     }
-  }
-
-  // Create assets directory in dist
-  await fs.ensureDir('dist/assets');
-
-  // Copy all image files from src to dist/assets
-  const imageFiles = glob.sync('src/**/*.{jpg,jpeg,png,gif,svg}');
-  for (const file of imageFiles) {
-    const destPath = path.join('dist', file);
-    await fs.ensureDir(path.dirname(destPath));
-    await fs.copy(file, destPath);
   }
 }
 
