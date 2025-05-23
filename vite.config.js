@@ -34,7 +34,7 @@ const htmlPages = getHtmlFiles();
 
 export default defineConfig({
   root: __dirname,
-  base: '/wec-global-vite/',
+  base: '/', // Use root path for custom domain
   publicDir: 'public',
   build: {
     outDir: 'dist',
