@@ -27,7 +27,7 @@
 
 	<title>WEC Global | Contact</title>
   <script type="module" crossorigin src="/assets/script.1b8ad1f6.js"></script>
-  <link rel="stylesheet" href="/assets/script.5ab1926e.css">
+  <link rel="stylesheet" href="/assets/script.6dbe29f3.css">
 </head>
 <body>
 	<div class="container">
@@ -64,7 +64,45 @@
 		<main class="main pb-3">
 			<section class="content-section">
 				<div class="content-section__copy">
-					<script type="text/javascript" src="https://form.jotform.com/jsform/220334163333042"></script>
+					<form action="https://formsubmit.co/g.green@wec-global.org" method="POST" class="contact-form">
+						<!-- Honeypot -->
+						<input type="text" name="_honey" style="display:none">
+						
+						<!-- Disable Captcha -->
+						<input type="hidden" name="_captcha" value="false">
+						
+						<!-- Success Page -->
+						<input type="hidden" name="_next" value="https://wec-global.org/thank-you.html">
+
+						<div class="form-group">
+							<label for="firstName">First Name</label>
+							<input type="text" name="firstName" id="firstName" required>
+						</div>
+
+						<div class="form-group">
+							<label for="lastName">Last Name</label>
+							<input type="text" name="lastName" id="lastName" required>
+						</div>
+
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input type="email" name="email" id="email" required>
+						</div>
+
+						<div class="form-group">
+							<label for="company">Current Company</label>
+							<input type="text" name="company" id="company" required>
+						</div>
+
+						<div class="form-group">
+							<label for="jobTitle">Job Title</label>
+							<input type="text" name="jobTitle" id="jobTitle" required>
+						</div>
+
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary">Submit</button>
+						</div>
+					</form>
 				</div>
 			</section>
 		</main>
