@@ -1,337 +1,439 @@
 <!DOCTYPE html>
 <html lang="en">
-	{{> _head title='Initiatives' }}
-	<body>
-		<div class="container">
-			<!-- Header -->
-			{{> _header initiatives='header__link--active'}}
-			<!-- End of Header -->
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+	<link rel="manifest" href="/site.webmanifest" />
 
-			{{> _hero-banner hero_title='See our initiatives' hero_subtitle='Find the
-			next event you’ll want to attend'
-			hero_image='/assets/img/headers/initiatives.svg' hero_image_alt='Women in
-			Ethics & Compliance Global'}}
+	<!--  Essential META Tags -->
+	<meta property="title" content="Initiatives" />
+	<meta
+		property="og:description"
+		content="A unique and exciting space for brilliant and smart-minded women in ethics and compliance to connect, learn and collaborate"
+	/>
+	<meta property="og:image" content="https://wec-global.org/wec-global.png" />
+	<meta property="og:url" content="https://wec-global.org" />
 
-			<main class="main pb-3">
-				<!-- Eventbrite Section -->
-				<!-- <section class="content-section">
-					<div class="content-section__copy">
-						<div id="eventbrite-widget-container-219775844467"></div>
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+		rel="stylesheet"
+	/>
 
-						<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+	<title>WEC Global | Initiatives</title>
+</head>
+<body>
+	<div class="container">
+		<!-- Header -->
+		<header class="header">
+			<div class="header__logo">
+				<a href="/">
+					<img src="/assets/img/logo.svg" alt="WEC Global Logo" />
+				</a>
+			</div>
+			<nav class="header__nav">
+				<a href="about.html" class="header__link">About</a>
+				<a href="team.html" class="header__link">Team</a>
+				<a href="membership.html" class="header__link">Membership</a>
+				<a href="friend.html" class="header__link">Friends</a>
+				<a href="initiatives.html" class="header__link header__link--active">Initiatives</a>
+				<a href="media.html" class="header__link">Media</a>
+				<a href="contact.html" class="header__link">Contact</a>
+			</nav>
+		</header>
+		<!-- End of Header -->
 
-						<script type="text/javascript">
-							var exampleCallback = function () {
-								console.log('Order complete!');
-							};
+		<section class="hero">
+			<div class="hero__title">
+				<h1 class="hero__title-h1">See our initiatives</h1>
+				<h3 class="hero__title-h3">Find the next event you'll want to attend</h3>
+			</div>
+			<div class="hero__image">
+				<img class="hero__image__main" src="/assets/img/headers/initiatives.svg"
+					alt="Women in Ethics & Compliance Global" />
+			</div>
+		</section>
 
-							window.EBWidgets.createWidget({
-								// Required
-								widgetType: 'checkout',
-								eventId: '219775844467',
-								iframeContainerId: 'eventbrite-widget-container-219775844467',
+		<main class="main pb-3">
+			<!-- Eventbrite Section -->
+			<!-- <section class="content-section">
+				<div class="content-section__copy">
+					<div id="eventbrite-widget-container-219775844467"></div>
 
-								// Optional
-								iframeContainerHeight: 425, // Widget height in pixels. Defaults to a minimum of 425px if not provided
-								onOrderComplete: exampleCallback, // Method called when an order has successfully completed
-							});
-						</script>
+					<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+
+					<script type="text/javascript">
+						var exampleCallback = function () {
+							console.log('Order complete!');
+						};
+
+						window.EBWidgets.createWidget({
+							// Required
+							widgetType: 'checkout',
+							eventId: '219775844467',
+							iframeContainerId: 'eventbrite-widget-container-219775844467',
+
+							// Optional
+							iframeContainerHeight: 425, // Widget height in pixels. Defaults to a minimum of 425px if not provided
+							onOrderComplete: exampleCallback, // Method called when an order has successfully completed
+						});
+					</script>
+				</div>
+			</section> -->
+
+			<!-- Past Events Section -->
+			<div class="content-section">
+				<div class="content-section__center">
+					<h2 class="heading-2">Past Events</h2>
+				</div>
+			</div>
+
+			<section class="container-grid mb-7">
+				<div class="blogposts">
+					<!-- Event: Bringing Ethics & Compliance Programs To Life -->
+					<div class="blogpost">
+						<img
+							src="/assets/img/events/2021-12-01-bringing-ethics-and-compliance-programs-to-life.png"
+							alt="Bringing Ethics & Compliance Programs To Life"
+							class="blogpost__image"
+						/>
+						<div class="blogpost__container">
+							<div class="blogpost__info">
+								<div class="blogpost__date">December 01st, 2021</div>
+							</div>
+							<div class="blogpost__description">
+								<div class="blogpost__title">
+									<h2 class="heading-2">
+										Bringing Ethics & Compliance Programs To Life
+									</h2>
+								</div>
+								<div class="blogpost__intro">Tour of the Eight Mindsets</div>
+							</div>
+						</div>
 					</div>
-				</section> -->
 
-				<!-- Past Events Section -->
-				<div class="content-section">
-					<div class="content-section__center">
-						<h2 class="heading-2">Past Events</h2>
+					<!-- Event: Developing Your Mental Fitness As A Leader -->
+					<div class="blogpost">
+						<img
+							src="/assets/img/events/2021-11-22-developing-your-mental-fitness-as-a-leader.png"
+							alt="Developing Your Mental Fitness As A Leader"
+							class="blogpost__image"
+						/>
+						<div class="blogpost__container">
+							<div class="blogpost__info">
+								<div class="blogpost__date">November 22nd, 2021</div>
+							</div>
+							<div class="blogpost__description">
+								<div class="blogpost__title">
+									<h2 class="heading-2">
+										Developing Your Mental Fitness As A Leader
+									</h2>
+								</div>
+								<div class="blogpost__intro">
+									Supporting women leaders take positive actions under
+									pressure
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Event: How Ethical And Unethical Decisions Get Made -->
+					<div class="blogpost">
+						<img
+							src="/assets/img/events/2021-11-10-how-ethical-and-unethical-decisions-get-made.png"
+							alt="How Ethical And Unethical Decisions Get Made"
+							class="blogpost__image"
+						/>
+						<div class="blogpost__container">
+							<div class="blogpost__info">
+								<div class="blogpost__date">November 10th, 2021</div>
+							</div>
+							<div class="blogpost__description">
+								<div class="blogpost__title">
+									<h2 class="heading-2">
+										How Ethical And Unethical Decisions Get Made
+									</h2>
+								</div>
+								<div class="blogpost__intro">
+									A story from inside the room where it happened with Jeff
+									Kluge
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Event: Overcoming Fear Of Failing As You Step Up In Your Career -->
+					<div class="blogpost">
+						<img
+							src="/assets/img/events/2021-10-21-overcoming-fear-of-failing.png"
+							alt="Overcoming Fear Of Failing As You Step Up In Your Career"
+							class="blogpost__image"
+						/>
+						<div class="blogpost__container">
+							<div class="blogpost__info">
+								<div class="blogpost__date">October 19th, 2021</div>
+							</div>
+							<div class="blogpost__description">
+								<div class="blogpost__title">
+									<h2 class="heading-2">
+										Overcoming Fear Of Failing As You Step Up In Your Career
+									</h2>
+								</div>
+								<div class="blogpost__intro">
+									Where does fear of failure come from? With Nikki Hill
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Event: Update On The U.S. Sanctions -->
+					<div class="blogpost">
+						<img
+							src="/assets/img/events/2021-10-08-event-update-on-the-us-sanctions.png"
+							alt="Update On The U.S. Sanctions"
+							class="blogpost__image"
+						/>
+						<div class="blogpost__container">
+							<div class="blogpost__info">
+								<div class="blogpost__date">October 8th, 2021</div>
+							</div>
+							<div class="blogpost__description">
+								<div class="blogpost__title">
+									<h2 class="heading-2">Update On The U.S. Sanctions</h2>
+								</div>
+								<div class="blogpost__intro">
+									The latest sanctions developments and best practices for
+									companies to stay on the right side of the law with John
+									Smith
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Event: Manipulation In The Workplace -->
+					<div class="blogpost">
+						<img
+							src="/assets/img/events/2021-09-29-manipulation-in-the-workplace.png"
+							alt="Manipulation In The Workplace"
+							class="blogpost__image"
+						/>
+						<div class="blogpost__container">
+							<div class="blogpost__info">
+								<div class="blogpost__date">September 29th, 2021</div>
+							</div>
+							<div class="blogpost__description">
+								<div class="blogpost__title">
+									<h2 class="heading-2">Manipulation In The Workplace</h2>
+								</div>
+								<div class="blogpost__intro">
+									Effective persuasion and influence techniques for the good
+									of yourself, colleagues and your organisation
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Event: Don't Let Zombie Ethics Destroy Your Compliance Practice! -->
+					<div class="blogpost">
+						<img
+							src="/assets/img/events/2021-08-31-event-leading-with-ethical-intelligence.png"
+							alt="Don't Let Zombie Ethics Destroy Your Compliance Practice! - Six wrong ideas about ethics you cannot afford to keep alive"
+							class="blogpost__image"
+						/>
+						<div class="blogpost__container">
+							<div class="blogpost__info">
+								<div class="blogpost__date">August 31st, 2021</div>
+							</div>
+							<div class="blogpost__description">
+								<div class="blogpost__title">
+									<h2 class="heading-2">
+										Don't Let Zombie Ethics Destroy Your Compliance Practice!
+									</h2>
+								</div>
+								<div class="blogpost__intro">
+									Six wrong ideas about ethics you cannot afford to keep alive
+									with Bruce Weinstein
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Event: Instituting A Compliance Program -->
+					<div class="blogpost">
+						<img
+							src="/assets/img/events/2021-08-26-event-interview-preparation-101.png"
+							alt="Interview Preparation 101 - What are the do's and dont's?"
+							class="blogpost__image"
+						/>
+						<div class="blogpost__container">
+							<div class="blogpost__info">
+								<div class="blogpost__date">August 26th, 2021</div>
+							</div>
+							<div class="blogpost__description">
+								<div class="blogpost__title">
+									<h2 class="heading-2">Interview Preparation 101</h2>
+								</div>
+								<div class="blogpost__intro">
+									What are the do's and dont's? with Elizabeth Willetts
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Event: Instituting A Compliance Program -->
+					<div class="blogpost">
+						<img
+							src="/assets/img/events/2021-08-16-event-instituting-a-compliance-program.png"
+							alt="Instituting A Compliance Program - When do I get to yell?"
+							class="blogpost__image"
+						/>
+						<div class="blogpost__container">
+							<div class="blogpost__info">
+								<div class="blogpost__date">August 16th, 2021</div>
+							</div>
+							<div class="blogpost__description">
+								<div class="blogpost__title">
+									<h2 class="heading-2">Instituting a Compliance Program</h2>
+								</div>
+								<div class="blogpost__intro">
+									When do I get to yell? with Animah Kosai, Stef Tschida &
+									Lisa Beth Lentini Walker
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Event: Ethical Blindness -->
+					<div class="blogpost">
+						<img
+							src="/assets/img/events/2021-06-29-event-ethical-blindness.png"
+							alt="Ethical Blindness - Why good people do bad things with Dr. Bettina Palazzo"
+							class="blogpost__image"
+						/>
+						<div class="blogpost__container">
+							<div class="blogpost__info">
+								<div class="blogpost__date">June 29th, 2021</div>
+							</div>
+							<div class="blogpost__description">
+								<div class="blogpost__title">
+									<h2 class="heading-2">Ethical Blindness</h2>
+								</div>
+								<div class="blogpost__intro">
+									Why good people do bad things with Dr. Bettina Palazzo
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Event: You Investing & ESG -->
+					<div class="blogpost">
+						<img
+							src="/assets/img/events/2021-05-20-event-you-investing-esg.png"
+							alt="You Investing & ESG - Aligning your pension with your values with Georgia Stewart"
+							class="blogpost__image"
+						/>
+						<div class="blogpost__container">
+							<div class="blogpost__info">
+								<div class="blogpost__date">May 20th, 2021</div>
+							</div>
+							<div class="blogpost__description">
+								<div class="blogpost__title">
+									<h2 class="heading-2">You Investing & ESG</h2>
+								</div>
+								<div class="blogpost__intro">
+									Aligning your pension with your values with Georgia Stewart
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="blogpost">
+						<img
+							src="/assets/img/events/2021-04-29-event-meet-the-women-behind-wec-global.png"
+							alt="Meet the Women Behind WEC Global"
+							class="blogpost__image"
+						/>
+						<div class="blogpost__container">
+							<div class="blogpost__info">
+								<div class="blogpost__date">April 29th, 2021</div>
+							</div>
+							<div class="blogpost__description">
+								<div class="blogpost__title">
+									<h2 class="heading-2">Meet the Women Behind WEC Global</h2>
+								</div>
+								<div class="blogpost__intro">
+									Discover what bind us together
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
+			</section>
+		</main>
 
-				<section class="container-grid mb-7">
-					<div class="blogposts">
-						<!-- Event: Bringing Ethics & Compliance Programs To Life -->
-						<div class="blogpost">
-							<img
-								src="/assets/img/events/2021-12-01-bringing-ethics-and-compliance-programs-to-life.png"
-								alt="Bringing Ethics & Compliance Programs To Life"
-								class="blogpost__image"
-							/>
-							<div class="blogpost__container">
-								<div class="blogpost__info">
-									<div class="blogpost__date">December 01st, 2021</div>
-								</div>
-								<div class="blogpost__description">
-									<div class="blogpost__title">
-										<h2 class="heading-2">
-											Bringing Ethics & Compliance Programs To Life
-										</h2>
-									</div>
-									<div class="blogpost__intro">Tour of the Eight Mindsets</div>
-								</div>
-							</div>
-						</div>
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="footer__content">
+				<div class="footer__section">
+					<h3 class="footer__title">About</h3>
+					<p class="footer__text">
+						Women in Ethics & Compliance Global (WEC Global) is a community of
+						brilliant and smart-minded women in ethics and compliance.
+					</p>
+				</div>
+				<div class="footer__section">
+					<h3 class="footer__title">Quick Links</h3>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a href="about.html" class="footer__link">About</a>
+						</li>
+						<li class="footer__item">
+							<a href="team.html" class="footer__link">Team</a>
+						</li>
+						<li class="footer__item">
+							<a href="membership.html" class="footer__link">Membership</a>
+						</li>
+						<li class="footer__item">
+							<a href="friend.html" class="footer__link">Friends</a>
+						</li>
+						<li class="footer__item">
+							<a href="initiatives.html" class="footer__link">Initiatives</a>
+						</li>
+						<li class="footer__item">
+							<a href="media.html" class="footer__link">Media</a>
+						</li>
+						<li class="footer__item">
+							<a href="contact.html" class="footer__link">Contact</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__section">
+					<h3 class="footer__title">Connect</h3>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a href="https://www.linkedin.com/company/wec-global/" target="_blank" class="footer__link">LinkedIn</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://twitter.com/wec_global" target="_blank" class="footer__link">Twitter</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://www.instagram.com/wec_global/" target="_blank" class="footer__link">Instagram</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer__copyright">
+				<p>&copy; 2023 Women in Ethics & Compliance Global. All rights reserved.</p>
+			</div>
+		</footer>
+		<!-- End of Footer -->
 
-						<!-- Event: Developing Your Mental Fitness As A Leader -->
-						<div class="blogpost">
-							<img
-								src="/assets/img/events/2021-11-22-developing-your-mental-fitness-as-a-leader.png"
-								alt="Developing Your Mental Fitness As A Leader"
-								class="blogpost__image"
-							/>
-							<div class="blogpost__container">
-								<div class="blogpost__info">
-									<div class="blogpost__date">November 22nd, 2021</div>
-								</div>
-								<div class="blogpost__description">
-									<div class="blogpost__title">
-										<h2 class="heading-2">
-											Developing Your Mental Fitness As A Leader
-										</h2>
-									</div>
-									<div class="blogpost__intro">
-										Supporting women leaders take positive actions under
-										pressure
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Event: How Ethical And Unethical Decisions Get Made -->
-						<div class="blogpost">
-							<img
-								src="/assets/img/events/2021-11-10-how-ethical-and-unethical-decisions-get-made.png"
-								alt="How Ethical And Unethical Decisions Get Made"
-								class="blogpost__image"
-							/>
-							<div class="blogpost__container">
-								<div class="blogpost__info">
-									<div class="blogpost__date">November 10th, 2021</div>
-								</div>
-								<div class="blogpost__description">
-									<div class="blogpost__title">
-										<h2 class="heading-2">
-											How Ethical And Unethical Decisions Get Made
-										</h2>
-									</div>
-									<div class="blogpost__intro">
-										A story from inside the room where it happened with Jeff
-										Kluge
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Event: Overcoming Fear Of Failing As You Step Up In Your Career -->
-						<div class="blogpost">
-							<img
-								src="/assets/img/events/2021-10-21-overcoming-fear-of-failing.png"
-								alt="Overcoming Fear Of Failing As You Step Up In Your Career"
-								class="blogpost__image"
-							/>
-							<div class="blogpost__container">
-								<div class="blogpost__info">
-									<div class="blogpost__date">October 19th, 2021</div>
-								</div>
-								<div class="blogpost__description">
-									<div class="blogpost__title">
-										<h2 class="heading-2">
-											Overcoming Fear Of Failing As You Step Up In Your Career
-										</h2>
-									</div>
-									<div class="blogpost__intro">
-										Where does fear of failure come from? With Nikki Hill
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Event: Update On The U.S. Sanctions -->
-						<div class="blogpost">
-							<img
-								src="/assets/img/events/2021-10-08-event-update-on-the-us-sanctions.png"
-								alt="Update On The U.S. Sanctions"
-								class="blogpost__image"
-							/>
-							<div class="blogpost__container">
-								<div class="blogpost__info">
-									<div class="blogpost__date">October 8th, 2021</div>
-								</div>
-								<div class="blogpost__description">
-									<div class="blogpost__title">
-										<h2 class="heading-2">Update On The U.S. Sanctions</h2>
-									</div>
-									<div class="blogpost__intro">
-										The latest sanctions developments and best practices for
-										companies to stay on the right side of the law with John
-										Smith
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Event: Manipulation In The Workplace -->
-						<div class="blogpost">
-							<img
-								src="/assets/img/events/2021-09-29-manipulation-in-the-workplace.png"
-								alt="Manipulation In The Workplace"
-								class="blogpost__image"
-							/>
-							<div class="blogpost__container">
-								<div class="blogpost__info">
-									<div class="blogpost__date">September 29th, 2021</div>
-								</div>
-								<div class="blogpost__description">
-									<div class="blogpost__title">
-										<h2 class="heading-2">Manipulation In The Workplace</h2>
-									</div>
-									<div class="blogpost__intro">
-										Effective persuasion and influence techniques for the good
-										of yourself, colleagues and your organisation
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Event: Don't Let Zombie Ethics Destroy Your Compliance Practice! -->
-						<div class="blogpost">
-							<img
-								src="/assets/img/events/2021-08-31-event-leading-with-ethical-intelligence.png"
-								alt="Don't Let Zombie Ethics Destroy Your Compliance Practice! - Six wrong ideas about ethics you cannot afford to keep alive"
-								class="blogpost__image"
-							/>
-							<div class="blogpost__container">
-								<div class="blogpost__info">
-									<div class="blogpost__date">August 31st, 2021</div>
-								</div>
-								<div class="blogpost__description">
-									<div class="blogpost__title">
-										<h2 class="heading-2">
-											Don't Let Zombie Ethics Destroy Your Compliance Practice!
-										</h2>
-									</div>
-									<div class="blogpost__intro">
-										Six wrong ideas about ethics you cannot afford to keep alive
-										with Bruce Weinstein
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Event: Instituting A Compliance Program -->
-						<div class="blogpost">
-							<img
-								src="/assets/img/events/2021-08-26-event-interview-preparation-101.png"
-								alt="Interview Preparation 101 - What are the do's and dont's?"
-								class="blogpost__image"
-							/>
-							<div class="blogpost__container">
-								<div class="blogpost__info">
-									<div class="blogpost__date">August 26th, 2021</div>
-								</div>
-								<div class="blogpost__description">
-									<div class="blogpost__title">
-										<h2 class="heading-2">Interview Preparation 101</h2>
-									</div>
-									<div class="blogpost__intro">
-										What are the do's and dont's? with Elizabeth Willetts
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Event: Instituting A Compliance Program -->
-						<div class="blogpost">
-							<img
-								src="/assets/img/events/2021-08-16-event-instituting-a-compliance-program.png"
-								alt="Instituting A Compliance Program - When do I get to yell?"
-								class="blogpost__image"
-							/>
-							<div class="blogpost__container">
-								<div class="blogpost__info">
-									<div class="blogpost__date">August 16th, 2021</div>
-								</div>
-								<div class="blogpost__description">
-									<div class="blogpost__title">
-										<h2 class="heading-2">Instituting a Compliance Program</h2>
-									</div>
-									<div class="blogpost__intro">
-										When do I get to yell? with Animah Kosai, Stef Tschida &
-										Lisa Beth Lentini Walker
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Event: Ethical Blindness -->
-						<div class="blogpost">
-							<img
-								src="/assets/img/events/2021-06-29-event-ethical-blindness.png"
-								alt="Ethical Blindness - Why good people do bad things with Dr. Bettina Palazzo"
-								class="blogpost__image"
-							/>
-							<div class="blogpost__container">
-								<div class="blogpost__info">
-									<div class="blogpost__date">June 29th, 2021</div>
-								</div>
-								<div class="blogpost__description">
-									<div class="blogpost__title">
-										<h2 class="heading-2">Ethical Blindness</h2>
-									</div>
-									<div class="blogpost__intro">
-										Why good people do bad things with Dr. Bettina Palazzo
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Event: You Investing & ESG -->
-						<div class="blogpost">
-							<img
-								src="/assets/img/events/2021-05-20-event-you-investing-esg.png"
-								alt="You Investing & ESG - Aligning your pension with your values with Georgia Stewart"
-								class="blogpost__image"
-							/>
-							<div class="blogpost__container">
-								<div class="blogpost__info">
-									<div class="blogpost__date">May 20th, 2021</div>
-								</div>
-								<div class="blogpost__description">
-									<div class="blogpost__title">
-										<h2 class="heading-2">You Investing & ESG</h2>
-									</div>
-									<div class="blogpost__intro">
-										Aligning your pension with your values with Georgia Stewart
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="blogpost">
-							<img
-								src="/assets/img/events/2021-04-29-event-meet-the-women-behind-wec-global.png"
-								alt="Meet the Women Behind WEC Global"
-								class="blogpost__image"
-							/>
-							<div class="blogpost__container">
-								<div class="blogpost__info">
-									<div class="blogpost__date">April 29th, 2021</div>
-								</div>
-								<div class="blogpost__description">
-									<div class="blogpost__title">
-										<h2 class="heading-2">Meet the Women Behind WEC Global</h2>
-									</div>
-									<div class="blogpost__intro">
-										Discover what bind us together
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-			</main>
-
-			<!-- Footer Partial -->
-			{{> _footer }}
-			<!-- End of Footer -->
-		</div>
-	</body>
+		<script type="module" src="/src/js/main.js"></script>
+	</div>
+</body>
 </html>

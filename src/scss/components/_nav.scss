@@ -14,8 +14,13 @@
 	z-index: 10;
 
 	&__logo {
-		max-height: 6rem;
+		max-height: 5.5rem;
 		margin-left: 2.5rem;
+
+		img {
+			max-height: 5.5rem;
+			width: auto;
+		}
 
 		&-link {
 			cursor: pointer;
@@ -66,12 +71,12 @@
 
 	&__item {
 		display: inline-block;
-		padding: 2.2rem 2.5rem;
+		padding: 2.2rem 3.5rem;
 		position: relative;
 		background-color: inherit;
 
 		@media only screen and (max-width: 75em) {
-			padding: 1.5rem 2rem;
+			padding: 1.5rem 3rem;
 		}
 	}
 
