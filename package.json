@@ -4,7 +4,7 @@
 	"homepage": "https://ceir-ceir.github.io/wec-global-vite",
 	"scripts": {
 		"dev": "vite",
-		"build": "vite build && node build.js",
+		"build": "vite build",
 		"preview": "vite preview",
 		"predeploy": "npm run build",
 		"deploy": "gh-pages -d dist"
@@ -16,7 +16,8 @@
 		"postcss": "^8.4.21",
 		"sass": "^1.58.3",
 		"vite": "^2.9.18",
-		"vite-plugin-handlebars": "^1.6.0"
+		"vite-plugin-handlebars": "^1.6.0",
+		"vite-plugin-html": "^3.2.2"
 	},
 	"dependencies": {
 		"glob": "^8.1.0",

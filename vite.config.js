@@ -1,28 +1,23 @@
 import path from 'path';
 import fs from 'fs';
-import handlebars from 'vite-plugin-handlebars';
 import { defineConfig } from 'vite';
+import { createHtmlPlugin } from 'vite-plugin-html';
 
-// Function to get all HTML files with proper naming
+// Function to get all HTML files
 function getHtmlFiles() {
-  const input = {
-    main: path.resolve(__dirname, 'index.html')
-  };
+  const input = {};
   
-  // Get files from src directory
-  const srcDir = path.resolve(__dirname, 'src');
-  if (fs.existsSync(srcDir)) {
-    const srcFiles = fs.readdirSync(srcDir)
-      .filter(file => file.endsWith('.html'));
-    
-    srcFiles.forEach(file => {
-      const name = file.replace('.html', '');
-      input[name] = path.resolve(srcDir, file);
-    });
-  }
+  // Get HTML files from root directory
+  const rootFiles = fs.readdirSync(__dirname)
+    .filter(file => file.endsWith('.html'));
   
-  // Get files from src/blogs directory
-  const blogsDir = path.resolve(__dirname, 'src', 'blogs');
+  rootFiles.forEach(file => {
+    const name = file.replace('.html', '');
+    input[name] = path.resolve(__dirname, file);
+  });
+  
+  // Get files from blogs directory (now in root)
+  const blogsDir = path.resolve(__dirname, 'blogs');
   if (fs.existsSync(blogsDir)) {
     const blogFiles = fs.readdirSync(blogsDir)
       .filter(file => file.endsWith('.html'));
@@ -39,16 +34,16 @@ function getHtmlFiles() {
 const htmlPages = getHtmlFiles();
 
 export default defineConfig({
-  root: path.resolve(__dirname),
-  base: '/', // Root-relative for custom domain
-  publicDir: 'public', // Set to public directory
+  root: __dirname,
+  base: '/wec-global-vite/', // Must match your GitHub repo name
+  publicDir: 'public',
   build: {
-    outDir: path.resolve(__dirname, 'dist'),
+    outDir: 'dist',
     emptyOutDir: true,
-    assetsDir: 'assets',
     rollupOptions: {
       input: htmlPages,
       output: {
+        // Keep consistent naming for assets
         assetFileNames: 'assets/[name].[hash][extname]',
         chunkFileNames: 'assets/[name].[hash].js',
         entryFileNames: 'assets/[name].[hash].js'
@@ -56,6 +51,35 @@ export default defineConfig({
     }
   },
   plugins: [
-    // Removed handlebars plugin since it's not working
+    createHtmlPlugin({
+      minify: true,
+      /**
+       * Data that will be injected into the HTML
+       * This will transform all absolute paths to include the base path
+       */
+      inject: {
+        tags: [
+          {
+            injectTo: 'head-prepend',
+            tag: 'script',
+            attrs: {
+              type: 'text/javascript'
+            },
+            children: `window.__BASE_PATH__ = '/wec-global-vite/';`
+          }
+        ]
+      }
+    }),
+    {
+      name: 'html-transform',
+      transformIndexHtml(html) {
+        // Transform all absolute paths in HTML to include base path
+        return html
+          .replace(/href="\//g, 'href="/wec-global-vite/')
+          .replace(/src="\//g, 'src="/wec-global-vite/')
+          .replace(/<link\s+rel="stylesheet"\s+href="\/assets\/[^"]+\.css">/g, '')
+          .replace(/<script\s+type="module"\s+src="\/src\/js\/main\.js"><\/script>/g, '');
+      }
+    }
   ]
 });
