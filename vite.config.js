@@ -1,7 +1,6 @@
 import path from 'path';
 import fs from 'fs';
 import { defineConfig } from 'vite';
-import { createHtmlPlugin } from 'vite-plugin-html';
 
 // Function to get all HTML files
 function getHtmlFiles() {
@@ -16,7 +15,7 @@ function getHtmlFiles() {
     input[name] = path.resolve(__dirname, file);
   });
   
-  // Get files from blogs directory (now in root)
+  // Get files from blogs directory
   const blogsDir = path.resolve(__dirname, 'blogs');
   if (fs.existsSync(blogsDir)) {
     const blogFiles = fs.readdirSync(blogsDir)
@@ -35,50 +34,27 @@ const htmlPages = getHtmlFiles();
 
 export default defineConfig({
   root: __dirname,
-  base: '/wec-global-vite/', // Must match your GitHub repo name
+  base: '/wec-global-vite/',
   publicDir: 'public',
   build: {
     outDir: 'dist',
     emptyOutDir: true,
     rollupOptions: {
-      input: htmlPages,
-      output: {
-        // Keep consistent naming for assets
-        assetFileNames: 'assets/[name].[hash][extname]',
-        chunkFileNames: 'assets/[name].[hash].js',
-        entryFileNames: 'assets/[name].[hash].js'
-      }
+      input: htmlPages
     }
   },
   plugins: [
-    createHtmlPlugin({
-      minify: true,
-      /**
-       * Data that will be injected into the HTML
-       * This will transform all absolute paths to include the base path
-       */
-      inject: {
-        tags: [
-          {
-            injectTo: 'head-prepend',
-            tag: 'script',
-            attrs: {
-              type: 'text/javascript'
-            },
-            children: `window.__BASE_PATH__ = '/wec-global-vite/';`
-          }
-        ]
-      }
-    }),
     {
       name: 'html-transform',
       transformIndexHtml(html) {
-        // Transform all absolute paths in HTML to include base path
+        // Replace absolute paths with base-relative paths
         return html
-          .replace(/href="\//g, 'href="/wec-global-vite/')
-          .replace(/src="\//g, 'src="/wec-global-vite/')
-          .replace(/<link\s+rel="stylesheet"\s+href="\/assets\/[^"]+\.css">/g, '')
-          .replace(/<script\s+type="module"\s+src="\/src\/js\/main\.js"><\/script>/g, '');
+          // Update href attributes
+          .replace(/href="\/(?!wec-global-vite\/)/g, 'href="/wec-global-vite/')
+          // Update src attributes
+          .replace(/src="\/(?!wec-global-vite\/)/g, 'src="/wec-global-vite/')
+          // Update action attributes (for forms)
+          .replace(/action="\/(?!wec-global-vite\/)/g, 'action="/wec-global-vite/');
       }
     }
   ]

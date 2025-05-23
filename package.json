@@ -4,7 +4,7 @@
 	"homepage": "https://ceir-ceir.github.io/wec-global-vite",
 	"scripts": {
 		"dev": "vite",
-		"build": "vite build",
+		"build": "vite build && node build.js",
 		"preview": "vite preview",
 		"predeploy": "npm run build",
 		"deploy": "gh-pages -d dist"
