@@ -42,20 +42,5 @@ export default defineConfig({
     rollupOptions: {
       input: htmlPages
     }
-  },
-  plugins: [
-    {
-      name: 'html-transform',
-      transformIndexHtml(html) {
-        // Replace absolute paths with base-relative paths
-        return html
-          // Update href attributes
-          .replace(/href="\/(?!wec-global-vite\/)/g, 'href="/wec-global-vite/')
-          // Update src attributes
-          .replace(/src="\/(?!wec-global-vite\/)/g, 'src="/wec-global-vite/')
-          // Update action attributes (for forms)
-          .replace(/action="\/(?!wec-global-vite\/)/g, 'action="/wec-global-vite/');
-      }
-    }
-  ]
+  }
 });
