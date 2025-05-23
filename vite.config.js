@@ -3,31 +3,37 @@ import fs from 'fs';
 import handlebars from 'vite-plugin-handlebars';
 import { defineConfig } from 'vite';
 
-// Function to get all HTML files
+// Function to get all HTML files with proper naming
 function getHtmlFiles() {
-  const htmlFiles = [path.resolve(__dirname, 'index.html')];
-  
-  // Get files from src directory
-  const srcDir = path.resolve(__dirname, 'src');
-  if (fs.existsSync(srcDir)) {
-    const srcFiles = fs.readdirSync(srcDir)
-      .filter(file => file.endsWith('.html'))
-      .map(file => path.resolve(srcDir, file));
-    htmlFiles.push(...srcFiles);
-  }
-  
-  // Get files from src/blogs directory
-  const blogsDir = path.resolve(__dirname, 'src', 'blogs');
-  if (fs.existsSync(blogsDir)) {
-    const blogFiles = fs.readdirSync(blogsDir)
-      .filter(file => file.endsWith('.html'))
-      .map(file => path.resolve(blogsDir, file));
-    htmlFiles.push(...blogFiles);
-  }
-  
-  return htmlFiles;
+  const input = {
+    index: path.resolve(__dirname, 'index.html')
+  };
+
+  const rootFiles = fs.readdirSync(__dirname)
+    .filter(file => file.endsWith('.html') && file !== 'index.html');
+
+  rootFiles.forEach(file => {
+    const name = file.replace('.html', '');
+    input[name] = path.resolve(__dirname, file);
+  });
+
+  const blogsDir = path.resolve(__dirname, 'blogs');
+if (fs.existsSync(blogsDir)) {
+  const blogFiles = fs.readdirSync(blogsDir)
+    .filter(file => file.endsWith('.html'));
+
+  blogFiles.forEach(file => {
+    const name = path.posix.join('blogs', file.replace('.html', '')); // ✅ normalize
+    input[name] = path.resolve(blogsDir, file);
+  });
 }
 
+
+
+  return input;
+}
+
+  
 const htmlPages = getHtmlFiles();
 
 export default defineConfig({
@@ -39,12 +45,19 @@ export default defineConfig({
     emptyOutDir: true,
     assetsDir: 'assets',
     rollupOptions: {
-      input: htmlPages
-    }
+      input: htmlPages,
+      output: {
+  assetFileNames: 'assets/[name].[hash][extname]',
+  chunkFileNames: 'assets/[name].[hash].js',
+}
+
   },
   plugins: [
     handlebars({
-      partialDirectory: path.resolve(__dirname, 'src', 'partials'),
+      partialDirectory: [
+        path.resolve(__dirname, 'src', 'partials')
+      ],
+      partialsExtension: '.html'
     }),
   ]
-});
+}});
