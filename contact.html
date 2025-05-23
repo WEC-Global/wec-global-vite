@@ -1,170 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-	<link rel="manifest" href="/site.webmanifest" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/site.webmanifest" />
 
-	<!--  Essential META Tags -->
-	<meta property="title" content="Contact" />
-	<meta
-		property="og:description"
-		content="A unique and exciting space for brilliant and smart-minded women in ethics and compliance to connect, learn and collaborate"
-	/>
-	<meta property="og:image" content="https://wec-global.org/wec-global.png" />
-	<meta property="og:url" content="https://wec-global.org" />
+		<!--  Essential META Tags -->
+		<meta property="title" content="Contact" />
+		<meta
+			property="og:description"
+			content="A unique and exciting space for brilliant and smart-minded women in ethics and compliance to connect, learn and collaborate"
+		/>
+		<meta property="og:image" content="https://wec-global.org/wec-global.png" />
+		<meta property="og:url" content="https://wec-global.org/contact.html" />
 
-	<!-- Font -->
-	<link rel="preconnect" href="https://fonts.gstatic.com" />
-	<link
-		href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
-		rel="stylesheet"
-	/>
+		<!-- Font -->
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+			rel="stylesheet"
+		/>
 
-	<title>WEC Global | Contact</title>
-  <script type="module" crossorigin src="/assets/script.1b8ad1f6.js"></script>
-  <link rel="stylesheet" href="/assets/script.6dbe29f3.css">
-</head>
-<body>
-	<div class="container">
-		<!-- Header -->
-		<header class="header">
-			<div class="header__logo">
-				<a href="/">
-					<img src="/assets/img/logo.svg" alt="WEC Global Logo" />
-				</a>
-			</div>
-			<nav class="header__nav">
-				<a href="about.html" class="header__link">About</a>
-				<a href="team.html" class="header__link">Team</a>
-				<a href="membership.html" class="header__link">Membership</a>
-				<a href="friend.html" class="header__link">Friends</a>
-				<a href="initiatives.html" class="header__link">Initiatives</a>
-				<a href="media.html" class="header__link">Media</a>
-				<a href="contact.html" class="header__link header__link--active">Contact</a>
-			</nav>
-		</header>
-		<!-- End of Header -->
-
-		<section class="hero">
-			<div class="hero__title">
-				<h1 class="hero__title-h1">Get in touch</h1>
-				<h3 class="hero__title-h3">We'd love to hear from you</h3>
-			</div>
-			<div class="hero__image">
-				<img class="hero__image__main" src="/assets/img/headers/contact.svg"
-					alt="Women in Ethics & Compliance Global" />
-			</div>
-		</section>
-
-		<main class="main pb-3">
-			<section class="content-section">
-				<div class="content-section__copy">
-					<form action="https://formsubmit.co/g.green@wec-global.org" method="POST" class="contact-form">
-						<!-- Honeypot -->
-						<input type="text" name="_honey" style="display:none">
-						
-						<!-- Disable Captcha -->
-						<input type="hidden" name="_captcha" value="false">
-						
-						<!-- Success Page -->
-						<input type="hidden" name="_next" value="https://wec-global.org/thank-you.html">
-
-						<div class="form-group">
-							<label for="firstName">First Name</label>
-							<input type="text" name="firstName" id="firstName" required>
-						</div>
-
-						<div class="form-group">
-							<label for="lastName">Last Name</label>
-							<input type="text" name="lastName" id="lastName" required>
-						</div>
-
-						<div class="form-group">
-							<label for="email">Email</label>
-							<input type="email" name="email" id="email" required>
-						</div>
-
-						<div class="form-group">
-							<label for="company">Current Company</label>
-							<input type="text" name="company" id="company" required>
-						</div>
-
-						<div class="form-group">
-							<label for="jobTitle">Job Title</label>
-							<input type="text" name="jobTitle" id="jobTitle" required>
-						</div>
-
-						<div class="form-group">
-							<button type="submit" class="btn btn-primary">Submit</button>
-						</div>
-					</form>
+		<title>WEC Global | Contact</title>
+		<script type="module" crossorigin src="/assets/script.1b8ad1f6.js"></script>
+		<link rel="stylesheet" href="/assets/script.6dbe29f3.css">
+	</head>
+	<body>
+		<div class="container">
+			<!-- Header -->
+			<header class="header">
+				<div class="header__content">
+					<a href="/index.html" class="header__logo-link">
+						<img
+							class="logo header__logo"
+							src="/assets/img/logos/logo_dark_horizontal.svg"
+							alt="WEC Global"
+						/>
+					</a>
+					<nav class="nav header__nav">
+						<ul class="nav__list">
+							<li class="nav__item">
+								<a href="/about.html" class="header__link">About</a>
+							</li>
+							<li class="nav__item nav__item--dropdown">
+								<a href="#" class="header__link">Join</a>
+								<div class="nav__dropdown">
+									<a href="/membership.html" class="header__link">Membership</a>
+									<a href="/friend.html" class="header__link">Friend</a>
+								</div>
+							</li>
+							<li class="nav__item">
+								<a href="/initiatives.html" class="header__link">Initiatives</a>
+							</li>
+							<li class="nav__item">
+								<a href="/team.html" class="header__link">Team</a>
+							</li>
+							<li class="nav__item">
+								<a href="/media.html" class="header__link">Media</a>
+							</li>
+							<li class="nav__item">
+								<a href="/contact.html" class="header__link">Contact</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="header__cta">
+						<a href="/membership.html" class="btn__link">Join us now</a>
+					</div>
 				</div>
+			</header>
+			<!-- End of Header -->
+
+			<section class="hero">
+				<div class="hero__text-box">
+					<h1 class="hero__title">
+						<span class="hero__title--main">Get in touch</span>
+						<span class="hero__title--sub">We'd love to hear from you</span>
+					</h1>
+				</div>
+				<img
+					class="hero__image"
+					src="/assets/img/headers/contact.svg"
+					alt="Contact us"
+				/>
 			</section>
-		</main>
 
-		<!-- Footer -->
-		<footer class="footer">
-			<div class="footer__content">
-				<div class="footer__section">
-					<h3 class="footer__title">About</h3>
-					<p class="footer__text">
-						Women in Ethics & Compliance Global (WEC Global) is a community of
-						brilliant and smart-minded women in ethics and compliance.
-					</p>
-				</div>
-				<div class="footer__section">
-					<h3 class="footer__title">Quick Links</h3>
+			<main class="main">
+				<section class="section">
+					<div class="section__content">
+						<form action="https://formsubmit.co/g.green@wec-global.org" method="POST" class="contact-form">
+							<!-- Honeypot -->
+							<input type="text" name="_honey" style="display:none">
+							
+							<!-- Disable Captcha -->
+							<input type="hidden" name="_captcha" value="false">
+							
+							<!-- Success Page -->
+							<input type="hidden" name="_next" value="https://wec-global.org/thank-you.html">
+
+							<div class="contact-form__row">
+								<div class="contact-form__group">
+									<label for="firstName" class="contact-form__label">First Name</label>
+									<input type="text" name="firstName" id="firstName" class="contact-form__input" required>
+								</div>
+
+								<div class="contact-form__group">
+									<label for="lastName" class="contact-form__label">Last Name</label>
+									<input type="text" name="lastName" id="lastName" class="contact-form__input" required>
+								</div>
+							</div>
+
+							<div class="contact-form__group">
+								<label for="email" class="contact-form__label">Email</label>
+								<input type="email" name="email" id="email" class="contact-form__input" required>
+							</div>
+
+							<div class="contact-form__group">
+								<label for="company" class="contact-form__label">Current Company</label>
+								<input type="text" name="company" id="company" class="contact-form__input" required>
+							</div>
+
+							<div class="contact-form__group">
+								<label for="jobTitle" class="contact-form__label">Job Title</label>
+								<input type="text" name="jobTitle" id="jobTitle" class="contact-form__input" required>
+							</div>
+
+							<div class="contact-form__group">
+								<label for="message" class="contact-form__label">Message (Optional)</label>
+								<textarea name="message" id="message" rows="5" class="contact-form__input contact-form__textarea"></textarea>
+							</div>
+
+							<div class="contact-form__group">
+								<button type="submit" class="btn btn--primary contact-form__submit">Send Message</button>
+							</div>
+						</form>
+					</div>
+				</section>
+			</main>
+
+			<!-- Footer -->
+			<footer class="footer">
+				<div class="footer__content">
+					<img class="logo footer__logo" src="/assets/img/logo.svg" alt="WEC Global" />
 					<ul class="footer__list">
 						<li class="footer__item">
-							<a href="about.html" class="footer__link">About</a>
+							<a
+								class="footer__link"
+								href="/assets/docs/Privacy Statement.pdf"
+								target="_blank"
+								rel="noreferrer"
+								>Privacy Policy</a
+							>
 						</li>
 						<li class="footer__item">
-							<a href="team.html" class="footer__link">Team</a>
+							<a
+								class="footer__link"
+								href="/assets/docs/Cookies Policy.pdf"
+								target="_blank"
+								rel="noreferrer"
+								>Cookies Policy</a
+							>
 						</li>
 						<li class="footer__item">
-							<a href="membership.html" class="footer__link">Membership</a>
+							<a
+								class="footer__link"
+								href="/assets/docs/Code of Ethics.pdf"
+								target="_blank"
+								rel="noreferrer"
+								>Code of Ethics</a
+							>
 						</li>
 						<li class="footer__item">
-							<a href="friend.html" class="footer__link">Friends</a>
+							<a
+								class="footer__link"
+								href="/assets/docs/Terms of Use.pdf"
+								target="_blank"
+								rel="noreferrer"
+								>Terms of Use</a
+							>
 						</li>
-						<li class="footer__item">
-							<a href="initiatives.html" class="footer__link">Initiatives</a>
+					</ul>
+					<ul class="footer__socials">
+						<li class="footer__social">
+							<a
+								href="https://www.linkedin.com/company/woman-in-ethics-compliance-global/"
+								target="_blank"
+								rel="noreferrer"
+								class="footer__icon-link"
+							>
+								<img
+									class="footer__icon"
+									src="/assets/img/icons/linkedin.svg"
+									alt="Linkedin"
+								/>
+							</a>
 						</li>
-						<li class="footer__item">
-							<a href="media.html" class="footer__link">Media</a>
-						</li>
-						<li class="footer__item">
-							<a href="contact.html" class="footer__link">Contact</a>
+						<li class="footer__social">
+							<a
+								href="https://www.instagram.com/wec_global/"
+								target="_blank"
+								rel="noreferrer"
+								class="footer__icon-link"
+							>
+								<img
+									class="footer__icon"
+									src="/assets/img/icons/instagram.svg"
+									alt="Instagram"
+								/>
+							</a>
 						</li>
 					</ul>
 				</div>
-				<div class="footer__section">
-					<h3 class="footer__title">Connect</h3>
-					<ul class="footer__list">
-						<li class="footer__item">
-							<a href="https://www.linkedin.com/company/wec-global/" target="_blank" class="footer__link">LinkedIn</a>
-						</li>
-						<li class="footer__item">
-							<a href="https://twitter.com/wec_global" target="_blank" class="footer__link">Twitter</a>
-						</li>
-						<li class="footer__item">
-							<a href="https://www.instagram.com/wec_global/" target="_blank" class="footer__link">Instagram</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="footer__copyright">
-				<p>&copy; 2023 Women in Ethics & Compliance Global. All rights reserved.</p>
-			</div>
-		</footer>
-		<!-- End of Footer -->
+			</footer>
+			<!-- End of Footer -->
+		</div>
 
 		
-	</div>
-</body>
+	</body>
 </html>
